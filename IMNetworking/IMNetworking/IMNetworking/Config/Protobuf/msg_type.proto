@@ -1,0 +1,38 @@
+option java_package = "com.xj.im.protocol.cs"; 
+option java_outer_classname = "MessageTypeProto"; 
+
+//F000000（表明消息是请求类的，相应类的还是命令类的）
+// FFFFFF（具体消息类型）
+enum MessageGroup{
+	REQUEST= 10000000;//请求
+	RESPONSE=20000000;//响应
+	COMMAND= 30000000;//命令
+}
+
+enum MessageType {
+    LOGIN_REQUEST = 10000001;//登录请求
+    LOGIN_RESPONSE=20000001;//登录结果
+    OFFLINEMESSAGE_REQUEST=10000002;//获取离线消息
+    OFFLINEMESSAGE_RESPONSE=20000002;//反馈离线消息列表
+    HEARTBEAT=10000003;//发送心跳
+    HEARTBEAT_ACK=20000003;//心跳反馈
+    CLOSE_REQUEST=10000004;//关闭请求
+    CLOSE_RESPONSE=20000004;//关闭反馈
+    CHAT_TEXT_SEND=10000005;//发送文本消息
+    CHAT_IMAGE_SEND=10000006;//发送图片消息
+    CHAT_VOICE_SEND=10000007;//发送语音消息
+    CHAT_ACK=20000005;//聊天消息反馈
+    CONTACTS_REQUEST=10000008;//获取联系人列表
+    CONTACTS_RESPONSE=20000008;//返回联系人列表
+    REGIST_REQUEST=10000009;//注册请求
+    REGIST_RESPONSE=20000009;//返回注册结果
+    MSG_HANDSHAKE_REQUEST=10000010;//消息同步请求
+    MSG_HANDSHAKE_RESPONSE=20000010;//消息同步结果
+    LOGOUT_REQUEST=10000011;//登出请求
+    LOGOUT_RESPONSE=20000011;//登出结果
+    TYPING_REQUEST=10000012;//正在输入
+    SHAKE_REQUEST=10000013;//发送抖动通知
+    DETECTOR_REQUEST=10000014;//链路探测消息
+    DETECTOR_RESPONSE=20000014;//链路探测应答消息
+    
+}

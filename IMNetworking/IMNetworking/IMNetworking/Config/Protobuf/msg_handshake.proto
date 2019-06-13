@@ -1,0 +1,12 @@
+option java_package = "com.xj.im.protocol.cs"; 
+option java_outer_classname = "HandShakeMsgProto"; 
+
+//MSG_HANDSHAKE_REQUEST=10000010
+message HandShakeRequestMsg { 
+} 
+
+
+//MSG_HANDSHAKE_RESPONSE=20000010
+message HandShakeResponseMsg { 
+  optional string lastMsgID=1;//服务器最后一次接收客户端发送消息id
+} 

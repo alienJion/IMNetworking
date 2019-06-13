@@ -3,19 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C62D694901E75758854418 /* Pods_IMNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */; };
 		93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A5422B2AC9500868E39 /* AppDelegate.m */; };
 		93134A5822B2AC9500868E39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A5722B2AC9500868E39 /* ViewController.m */; };
 		93134A5B22B2AC9500868E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5922B2AC9500868E39 /* Main.storyboard */; };
 		93134A5D22B2AC9500868E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5C22B2AC9500868E39 /* Assets.xcassets */; };
 		93134A6022B2AC9500868E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5E22B2AC9500868E39 /* LaunchScreen.storyboard */; };
 		93134A6322B2AC9500868E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6222B2AC9500868E39 /* main.m */; };
+		93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6D22B2AD9300868E39 /* SocketManager.m */; };
+		93134A9D22B2AD9300868E39 /* SendMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6F22B2AD9300868E39 /* SendMsgModel.m */; };
+		93134A9E22B2AD9300868E39 /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7222B2AD9300868E39 /* ChatManager.m */; };
+		93134A9F22B2AD9300868E39 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7422B2AD9300868E39 /* Reachability.m */; };
+		93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7C22B2AD9300868E39 /* MsgStatuscodepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8422B2AD9300868E39 /* MsgChatpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8522B2AD9300868E39 /* MsgRegistpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AA722B2AD9300868E39 /* MsgHeaderpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8622B2AD9300868E39 /* MsgHeaderpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8722B2AD9300868E39 /* MsgTypepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AAA22B2AD9300868E39 /* MsgLogoutpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8922B2AD9300868E39 /* MsgLogoutpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8A22B2AD9300868E39 /* MsgLoginpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8C22B2AD9300868E39 /* MsgHeartbeatpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.release.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		93134A5022B2AC9500868E39 /* IMNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93134A5322B2AC9500868E39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93134A5422B2AC9500868E39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +42,40 @@
 		93134A5F22B2AC9500868E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93134A6122B2AC9500868E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93134A6222B2AC9500868E39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93134A6C22B2AD9300868E39 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		93134A6D22B2AD9300868E39 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		93134A6F22B2AD9300868E39 /* SendMsgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMsgModel.m; sourceTree = "<group>"; };
+		93134A7022B2AD9300868E39 /* ChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatManager.h; sourceTree = "<group>"; };
+		93134A7122B2AD9300868E39 /* SendMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgModel.h; sourceTree = "<group>"; };
+		93134A7222B2AD9300868E39 /* ChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatManager.m; sourceTree = "<group>"; };
+		93134A7422B2AD9300868E39 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		93134A7522B2AD9300868E39 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		93134A7822B2AD9300868E39 /* UIHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHeader.h; sourceTree = "<group>"; };
+		93134A7922B2AD9300868E39 /* RequestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHeader.h; sourceTree = "<group>"; };
+		93134A7A22B2AD9300868E39 /* FileHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHeader.h; sourceTree = "<group>"; };
+		93134A7C22B2AD9300868E39 /* MsgStatuscodepbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgStatuscodepbobjc.m; sourceTree = "<group>"; };
+		93134A7D22B2AD9300868E39 /* MsgTypingpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgTypingpbobjc.h; sourceTree = "<group>"; };
+		93134A8022B2AD9300868E39 /* MsgHeartbeatpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgHeartbeatpbobjc.h; sourceTree = "<group>"; };
+		93134A8122B2AD9300868E39 /* MsgProtobufHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgProtobufHeader.h; sourceTree = "<group>"; };
+		93134A8422B2AD9300868E39 /* MsgChatpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgChatpbobjc.m; sourceTree = "<group>"; };
+		93134A8522B2AD9300868E39 /* MsgRegistpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgRegistpbobjc.m; sourceTree = "<group>"; };
+		93134A8622B2AD9300868E39 /* MsgHeaderpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgHeaderpbobjc.m; sourceTree = "<group>"; };
+		93134A8722B2AD9300868E39 /* MsgTypepbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgTypepbobjc.m; sourceTree = "<group>"; };
+		93134A8922B2AD9300868E39 /* MsgLogoutpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgLogoutpbobjc.m; sourceTree = "<group>"; };
+		93134A8A22B2AD9300868E39 /* MsgLoginpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgLoginpbobjc.m; sourceTree = "<group>"; };
+		93134A8B22B2AD9300868E39 /* MsgShakepbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgShakepbobjc.h; sourceTree = "<group>"; };
+		93134A8C22B2AD9300868E39 /* MsgHeartbeatpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgHeartbeatpbobjc.m; sourceTree = "<group>"; };
+		93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgTypingpbobjc.m; sourceTree = "<group>"; };
+		93134A8E22B2AD9300868E39 /* MsgStatuscodepbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgStatuscodepbobjc.h; sourceTree = "<group>"; };
+		93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgShakepbobjc.m; sourceTree = "<group>"; };
+		93134A9522B2AD9300868E39 /* MsgLoginpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgLoginpbobjc.h; sourceTree = "<group>"; };
+		93134A9622B2AD9300868E39 /* MsgLogoutpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgLogoutpbobjc.h; sourceTree = "<group>"; };
+		93134A9722B2AD9300868E39 /* MsgTypepbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgTypepbobjc.h; sourceTree = "<group>"; };
+		93134A9922B2AD9300868E39 /* MsgHeaderpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgHeaderpbobjc.h; sourceTree = "<group>"; };
+		93134A9A22B2AD9300868E39 /* MsgChatpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgChatpbobjc.h; sourceTree = "<group>"; };
+		93134A9B22B2AD9300868E39 /* MsgRegistpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgRegistpbobjc.h; sourceTree = "<group>"; };
+		9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.debug.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +83,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C62D694901E75758854418 /* Pods_IMNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6690EFC21C948BE9B06E0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93134A4722B2AC9500868E39 = {
 			isa = PBXGroup;
 			children = (
 				93134A5222B2AC9500868E39 /* IMNetworking */,
 				93134A5122B2AC9500868E39 /* Products */,
+				9AA6363AF7AC92251C21B76D /* Pods */,
+				3D6690EFC21C948BE9B06E0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +119,7 @@
 		93134A5222B2AC9500868E39 /* IMNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				93134A6922B2AD9300868E39 /* IMNetworking */,
 				93134A5322B2AC9500868E39 /* AppDelegate.h */,
 				93134A5422B2AC9500868E39 /* AppDelegate.m */,
 				93134A5622B2AC9500868E39 /* ViewController.h */,
@@ -71,6 +133,110 @@
 			path = IMNetworking;
 			sourceTree = "<group>";
 		};
+		93134A6922B2AD9300868E39 /* IMNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				93134A6A22B2AD9300868E39 /* Tools */,
+				93134A7622B2AD9300868E39 /* Config */,
+			);
+			path = IMNetworking;
+			sourceTree = "<group>";
+		};
+		93134A6A22B2AD9300868E39 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				93134A6B22B2AD9300868E39 /* SocketManager */,
+				93134A6E22B2AD9300868E39 /* Manager */,
+				93134A7322B2AD9300868E39 /* NetworkTest */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		93134A6B22B2AD9300868E39 /* SocketManager */ = {
+			isa = PBXGroup;
+			children = (
+				93134A6C22B2AD9300868E39 /* SocketManager.h */,
+				93134A6D22B2AD9300868E39 /* SocketManager.m */,
+			);
+			path = SocketManager;
+			sourceTree = "<group>";
+		};
+		93134A6E22B2AD9300868E39 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				93134A7022B2AD9300868E39 /* ChatManager.h */,
+				93134A7222B2AD9300868E39 /* ChatManager.m */,
+				93134A7122B2AD9300868E39 /* SendMsgModel.h */,
+				93134A6F22B2AD9300868E39 /* SendMsgModel.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		93134A7322B2AD9300868E39 /* NetworkTest */ = {
+			isa = PBXGroup;
+			children = (
+				93134A7422B2AD9300868E39 /* Reachability.m */,
+				93134A7522B2AD9300868E39 /* Reachability.h */,
+			);
+			path = NetworkTest;
+			sourceTree = "<group>";
+		};
+		93134A7622B2AD9300868E39 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				93134A7722B2AD9300868E39 /* PrefixHeader */,
+				93134A7B22B2AD9300868E39 /* Protobuf */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		93134A7722B2AD9300868E39 /* PrefixHeader */ = {
+			isa = PBXGroup;
+			children = (
+				93134A7822B2AD9300868E39 /* UIHeader.h */,
+				93134A7922B2AD9300868E39 /* RequestHeader.h */,
+				93134A7A22B2AD9300868E39 /* FileHeader.h */,
+			);
+			path = PrefixHeader;
+			sourceTree = "<group>";
+		};
+		93134A7B22B2AD9300868E39 /* Protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				93134A8122B2AD9300868E39 /* MsgProtobufHeader.h */,
+				93134A9A22B2AD9300868E39 /* MsgChatpbobjc.h */,
+				93134A8422B2AD9300868E39 /* MsgChatpbobjc.m */,
+				93134A9922B2AD9300868E39 /* MsgHeaderpbobjc.h */,
+				93134A8622B2AD9300868E39 /* MsgHeaderpbobjc.m */,
+				93134A8022B2AD9300868E39 /* MsgHeartbeatpbobjc.h */,
+				93134A8C22B2AD9300868E39 /* MsgHeartbeatpbobjc.m */,
+				93134A9522B2AD9300868E39 /* MsgLoginpbobjc.h */,
+				93134A8A22B2AD9300868E39 /* MsgLoginpbobjc.m */,
+				93134A9622B2AD9300868E39 /* MsgLogoutpbobjc.h */,
+				93134A8922B2AD9300868E39 /* MsgLogoutpbobjc.m */,
+				93134A9B22B2AD9300868E39 /* MsgRegistpbobjc.h */,
+				93134A8522B2AD9300868E39 /* MsgRegistpbobjc.m */,
+				93134A8B22B2AD9300868E39 /* MsgShakepbobjc.h */,
+				93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */,
+				93134A8E22B2AD9300868E39 /* MsgStatuscodepbobjc.h */,
+				93134A7C22B2AD9300868E39 /* MsgStatuscodepbobjc.m */,
+				93134A9722B2AD9300868E39 /* MsgTypepbobjc.h */,
+				93134A8722B2AD9300868E39 /* MsgTypepbobjc.m */,
+				93134A7D22B2AD9300868E39 /* MsgTypingpbobjc.h */,
+				93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */,
+			);
+			path = Protobuf;
+			sourceTree = "<group>";
+		};
+		9AA6363AF7AC92251C21B76D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */,
+				42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93134A6622B2AC9500868E39 /* Build configuration list for PBXNativeTarget "IMNetworking" */;
 			buildPhases = (
+				5DE9E0B7B3476BA57B9E8267 /* [CP] Check Pods Manifest.lock */,
 				93134A4C22B2AC9500868E39 /* Sources */,
 				93134A4D22B2AC9500868E39 /* Frameworks */,
 				93134A4E22B2AC9500868E39 /* Resources */,
+				5F4016903511284341F701A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,14 +304,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DE9E0B7B3476BA57B9E8267 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMNetworking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F4016903511284341F701A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMNetworking/Pods-IMNetworking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMNetworking/Pods-IMNetworking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMNetworking/Pods-IMNetworking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93134A4C22B2AC9500868E39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93134A9D22B2AD9300868E39 /* SendMsgModel.m in Sources */,
 				93134A5822B2AC9500868E39 /* ViewController.m in Sources */,
+				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
+				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
+				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
 				93134A6322B2AC9500868E39 /* main.m in Sources */,
+				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,
+				93134AA722B2AD9300868E39 /* MsgHeaderpbobjc.m in Sources */,
+				93134A9F22B2AD9300868E39 /* Reachability.m in Sources */,
+				93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */,
+				93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */,
+				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,
+				93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */,
 				93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */,
+				93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */,
+				93134A9E22B2AD9300868E39 /* ChatManager.m in Sources */,
+				93134AAA22B2AD9300868E39 /* MsgLogoutpbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +507,7 @@
 		};
 		93134A6722B2AC9500868E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +525,7 @@
 		};
 		93134A6822B2AC9500868E39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

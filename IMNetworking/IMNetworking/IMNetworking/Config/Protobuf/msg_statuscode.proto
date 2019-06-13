@@ -1,0 +1,13 @@
+option java_package = "com.xj.im.protocol.cs"; 
+option java_outer_classname = "StatusCodeProto"; 
+
+enum StatusCode {
+    SUCCESS = 1;// 成功
+    TOKEN_INVALID = 2;// token失效
+    USER_NAME_ALREADY_EXITS = 3;// 用户名已经存在
+    FAILED = 4;// 失败
+    HASPENDING_CTRL_MSG = 5;// 有正在处理的控制消息
+    USER_NAME_PASSWORD_ERROR = 6;//用户名或密码错
+    NOT_LOGIN = 7;//未登录
+    USER_HAS_ONLINE_INVALID = 8;// 用户在其他设备上已登录
+}

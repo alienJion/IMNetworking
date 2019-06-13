@@ -1,0 +1,17 @@
+option java_package = "com.xj.im.protocol.cs"; 
+option java_outer_classname = "LogoutMsgProto"; 
+
+//request header:  appkey,clientMessageId,clientType,DeviceId,protocolVersion
+//response header:  clientMessageId,time,statusCode,des
+
+
+
+//LOGOUT_REQUEST=10000011
+message LogoutRequestMsg {
+  optional int64 extType=1[default = 0];//扩展类型
+  optional int32 extLength=2;//扩展消息体长度 
+} 
+
+//LOGOUT_RESPONSE=20000011
+message LogoutResponseMsg { 
+} 
