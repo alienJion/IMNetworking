@@ -15,9 +15,6 @@
 		93134A6022B2AC9500868E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5E22B2AC9500868E39 /* LaunchScreen.storyboard */; };
 		93134A6322B2AC9500868E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6222B2AC9500868E39 /* main.m */; };
 		93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6D22B2AD9300868E39 /* SocketManager.m */; };
-		93134A9D22B2AD9300868E39 /* SendMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A6F22B2AD9300868E39 /* SendMsgModel.m */; };
-		93134A9E22B2AD9300868E39 /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7222B2AD9300868E39 /* ChatManager.m */; };
-		93134A9F22B2AD9300868E39 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7422B2AD9300868E39 /* Reachability.m */; };
 		93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A7C22B2AD9300868E39 /* MsgStatuscodepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8422B2AD9300868E39 /* MsgChatpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8522B2AD9300868E39 /* MsgRegistpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -28,6 +25,11 @@
 		93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8C22B2AD9300868E39 /* MsgHeartbeatpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		939DA23822B34311004968E6 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 939DA23722B34311004968E6 /* MessageService.m */; };
+		93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */; };
+		93D3E8D022B3440D00CEB56C /* MessageSendDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */; };
+		93D3E8D322B3446C00CEB56C /* MessageSendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8D222B3446C00CEB56C /* MessageSendModel.m */; };
+		93D3E8D622B349DA00CEB56C /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8D522B349DA00CEB56C /* MessageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +46,6 @@
 		93134A6222B2AC9500868E39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93134A6C22B2AD9300868E39 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
 		93134A6D22B2AD9300868E39 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
-		93134A6F22B2AD9300868E39 /* SendMsgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMsgModel.m; sourceTree = "<group>"; };
-		93134A7022B2AD9300868E39 /* ChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatManager.h; sourceTree = "<group>"; };
-		93134A7122B2AD9300868E39 /* SendMsgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMsgModel.h; sourceTree = "<group>"; };
-		93134A7222B2AD9300868E39 /* ChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatManager.m; sourceTree = "<group>"; };
-		93134A7422B2AD9300868E39 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		93134A7522B2AD9300868E39 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93134A7822B2AD9300868E39 /* UIHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHeader.h; sourceTree = "<group>"; };
 		93134A7922B2AD9300868E39 /* RequestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHeader.h; sourceTree = "<group>"; };
 		93134A7A22B2AD9300868E39 /* FileHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHeader.h; sourceTree = "<group>"; };
@@ -74,6 +70,16 @@
 		93134A9922B2AD9300868E39 /* MsgHeaderpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgHeaderpbobjc.h; sourceTree = "<group>"; };
 		93134A9A22B2AD9300868E39 /* MsgChatpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgChatpbobjc.h; sourceTree = "<group>"; };
 		93134A9B22B2AD9300868E39 /* MsgRegistpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgRegistpbobjc.h; sourceTree = "<group>"; };
+		939DA23622B34311004968E6 /* MessageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = "<group>"; };
+		939DA23722B34311004968E6 /* MessageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = "<group>"; };
+		93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageRecDeal.h; sourceTree = "<group>"; };
+		93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageRecDeal.m; sourceTree = "<group>"; };
+		93D3E8CE22B3440D00CEB56C /* MessageSendDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSendDeal.h; sourceTree = "<group>"; };
+		93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSendDeal.m; sourceTree = "<group>"; };
+		93D3E8D122B3446C00CEB56C /* MessageSendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSendModel.h; sourceTree = "<group>"; };
+		93D3E8D222B3446C00CEB56C /* MessageSendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSendModel.m; sourceTree = "<group>"; };
+		93D3E8D422B349DA00CEB56C /* MessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
+		93D3E8D522B349DA00CEB56C /* MessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageManager.m; sourceTree = "<group>"; };
 		9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.debug.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,20 +142,10 @@
 		93134A6922B2AD9300868E39 /* IMNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				93134A6A22B2AD9300868E39 /* Tools */,
+				939DA23522B34213004968E6 /* MessageService */,
 				93134A7622B2AD9300868E39 /* Config */,
 			);
 			path = IMNetworking;
-			sourceTree = "<group>";
-		};
-		93134A6A22B2AD9300868E39 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				93134A6B22B2AD9300868E39 /* SocketManager */,
-				93134A6E22B2AD9300868E39 /* Manager */,
-				93134A7322B2AD9300868E39 /* NetworkTest */,
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		93134A6B22B2AD9300868E39 /* SocketManager */ = {
@@ -161,31 +157,25 @@
 			path = SocketManager;
 			sourceTree = "<group>";
 		};
-		93134A6E22B2AD9300868E39 /* Manager */ = {
+		93134A6E22B2AD9300868E39 /* MessageManager */ = {
 			isa = PBXGroup;
 			children = (
-				93134A7022B2AD9300868E39 /* ChatManager.h */,
-				93134A7222B2AD9300868E39 /* ChatManager.m */,
-				93134A7122B2AD9300868E39 /* SendMsgModel.h */,
-				93134A6F22B2AD9300868E39 /* SendMsgModel.m */,
+				93D3E8D422B349DA00CEB56C /* MessageManager.h */,
+				93D3E8D522B349DA00CEB56C /* MessageManager.m */,
+				93D3E8D122B3446C00CEB56C /* MessageSendModel.h */,
+				93D3E8D222B3446C00CEB56C /* MessageSendModel.m */,
+				93D3E8CE22B3440D00CEB56C /* MessageSendDeal.h */,
+				93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */,
+				93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */,
+				93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */,
 			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		93134A7322B2AD9300868E39 /* NetworkTest */ = {
-			isa = PBXGroup;
-			children = (
-				93134A7422B2AD9300868E39 /* Reachability.m */,
-				93134A7522B2AD9300868E39 /* Reachability.h */,
-			);
-			path = NetworkTest;
+			path = MessageManager;
 			sourceTree = "<group>";
 		};
 		93134A7622B2AD9300868E39 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				93134A7722B2AD9300868E39 /* PrefixHeader */,
-				93134A7B22B2AD9300868E39 /* Protobuf */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -226,6 +216,26 @@
 				93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */,
 			);
 			path = Protobuf;
+			sourceTree = "<group>";
+		};
+		939DA23422B34123004968E6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				939DA23622B34311004968E6 /* MessageService.h */,
+				939DA23722B34311004968E6 /* MessageService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		939DA23522B34213004968E6 /* MessageService */ = {
+			isa = PBXGroup;
+			children = (
+				93134A6B22B2AD9300868E39 /* SocketManager */,
+				93134A7B22B2AD9300868E39 /* Protobuf */,
+				93134A6E22B2AD9300868E39 /* MessageManager */,
+				939DA23422B34123004968E6 /* Service */,
+			);
+			path = MessageService;
 			sourceTree = "<group>";
 		};
 		9AA6363AF7AC92251C21B76D /* Pods */ = {
@@ -351,22 +361,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93134A9D22B2AD9300868E39 /* SendMsgModel.m in Sources */,
 				93134A5822B2AC9500868E39 /* ViewController.m in Sources */,
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
+				93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */,
+				93D3E8D622B349DA00CEB56C /* MessageManager.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
+				93D3E8D322B3446C00CEB56C /* MessageSendModel.m in Sources */,
+				939DA23822B34311004968E6 /* MessageService.m in Sources */,
 				93134A6322B2AC9500868E39 /* main.m in Sources */,
 				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,
 				93134AA722B2AD9300868E39 /* MsgHeaderpbobjc.m in Sources */,
-				93134A9F22B2AD9300868E39 /* Reachability.m in Sources */,
+				93D3E8D022B3440D00CEB56C /* MessageSendDeal.m in Sources */,
 				93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */,
 				93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */,
 				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,
 				93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */,
 				93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */,
 				93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */,
-				93134A9E22B2AD9300868E39 /* ChatManager.m in Sources */,
 				93134AAA22B2AD9300868E39 /* MsgLogoutpbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

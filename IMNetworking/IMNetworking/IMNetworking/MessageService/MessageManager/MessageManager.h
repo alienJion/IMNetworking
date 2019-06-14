@@ -1,8 +1,8 @@
 //
-//  ChatManager.h
-//  XJIM
+//  MessageManager.h
+//  IMNetworking
 //
-//  Created by Alien on 2019/6/13.
+//  Created by Alien on 2019/6/14.
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
@@ -10,12 +10,12 @@
 #import "FileHeader.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatManager : NSObject
-+ (ChatManager *)shareInstance;
+@interface MessageManager : NSObject
++ (MessageManager *)shareInstance;
 
 /**
  发送文字消息（包括系统表情）
-
+ 
  @param text 发送的文字
  @param to 接收方
  @param ext 扩展信息

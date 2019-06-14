@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CocoaAsyncSocket/CocoaAsyncSocket-umbrella.h>
-#import "SendMsgModel.h"
+#import "MessageSendDeal.h"
 //首先是定义枚举,记录连接的状态
 typedef NS_ENUM(NSUInteger, LinkStatus)
 {

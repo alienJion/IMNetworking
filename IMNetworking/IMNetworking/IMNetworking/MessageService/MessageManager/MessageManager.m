@@ -1,28 +1,27 @@
 //
-//  ChatManager.m
-//  XJIM
+//  MessageManager.m
+//  IMNetworking
 //
-//  Created by Alien on 2019/6/13.
+//  Created by Alien on 2019/6/14.
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
-#import "ChatManager.h"
-#import "SendMsgModel.h"
-@interface ChatManager ()
+#import "MessageManager.h"
+#import "MessageSendDeal.h"
+@interface MessageManager ()
 @property(nonatomic,strong)NSMutableData *sendData;
 @property (nonatomic,strong)  Header *msgHeader;
 
 @end
-
-@implementation ChatManager
-static ChatManager *_chatManager = nil;
-+ (ChatManager *)shareInstance
+@implementation MessageManager
+static MessageManager *_messageManager = nil;
++ (MessageManager *)shareInstance
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _chatManager = [[ChatManager alloc] init];
+        _messageManager = [[MessageManager alloc] init];
     });
-    return _chatManager;
+    return _messageManager;
 }
 
 /**
@@ -33,19 +32,22 @@ static ChatManager *_chatManager = nil;
  @param ext 扩展信息
  */
 -(void)sendTextMessage:(NSString*)text
-                         toUser:(long long)to
+                toUser:(long long)to
                    ext:(NSData * _Nullable )ext{
     if (ext == nil) {
         ChatTextMsg *chatText = [[ChatTextMsg alloc]init];
         chatText.content = text;
         chatText.receiverUid = to;
-        NSData *chatData = [chatText data];
+        NSData *textData = [chatText data];
         
-        SendMsgModel *model = [SendMsgModel shareInstance];
+        MessageSendModel *model = [[MessageSendModel alloc]init];
+        model.bodyData = textData;
         model.msgHeader.msgType = MessageType_ChatTextSend;//发送文本类型
         model.msgHeader.chatMsgType = Header_ChatMsgType_Single;//单聊
-        model.bodyData = chatData;
-        NSData *data = [model getSendMessageData];
+        
+        MessageSendDeal *sendDealModel = [MessageSendDeal shareInstance];
+        sendDealModel.sendModel = model;
+        NSData *data = [sendDealModel getSendMessageData];
         [[SocketManager shareInstance] sendMsgPacket:data];
     }
 }
@@ -55,10 +57,13 @@ static ChatManager *_chatManager = nil;
 -(void)sendBeatMessage{
     HeartBeatMsg *heart = [[HeartBeatMsg alloc]init];
     NSData *heartData = [heart data];
-    SendMsgModel *model = [SendMsgModel shareInstance];
-    model.msgHeader.msgType = MessageType_Heartbeat;//发送心跳
+    MessageSendModel *model = [[MessageSendModel alloc]init];
     model.bodyData = heartData;
-    NSData *data = [model getSendMessageData];
+    model.msgHeader.msgType = MessageType_Heartbeat;//心跳
+    
+    MessageSendDeal *sendModel = [MessageSendDeal shareInstance];
+    sendModel.sendModel = model;
+    NSData *data = [sendModel getSendMessageData];
     [[SocketManager shareInstance] sendMsgPacket:data];
 }
 
