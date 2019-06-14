@@ -5,9 +5,9 @@
 //  Created by Alien on 2019/6/13.
 //  Copyright © 2019 ouwen. All rights reserved.
 //
-#import "MessageManager.h"
 #import "SocketManager.h"
 #define SocketHost @"192.168.1.137"
+//#define SocketHost @"192.168.10.123"
 #define SocketPort 7002
 @interface SocketManager()<GCDAsyncSocketDelegate>
 @property (nonatomic,strong) NSMutableData *cacheData;
@@ -66,7 +66,6 @@
 
 //    [self addBeatTimer];//发送心跳包
     //    [self sendDataToServer];
-    [self.sendMessageject sendNext:sock];
     //记录连接成功状态
     if (self.delegate && [self.delegate respondsToSelector:@selector(socketDidConnectToHost:port:)])
     {
@@ -88,7 +87,11 @@
     [self readMsgPacket];
     //服务器推送次数
     self.pushCount++;
-    [self handleRecvData:data];
+    MessageRecDeal *messageRecDeal = [MessageRecDeal shareInstance];
+   [messageRecDeal handleRecvData:data];
+    [messageRecDeal.dataSubject subscribeNext:^(id  _Nullable x) {
+        
+    }];
     //在这里进行校验操作,情况分为成功和失败两种,成功的操作一般都是拉取数据
     //收到了服务器传给的数据,相对应的读数据的类来处理收到的数据
     if (self.delegate && [self.delegate respondsToSelector:@selector(socketDidResponse:)])
@@ -96,45 +99,6 @@
         [self.delegate socketDidResponse:[data mutableCopy]];
     }
 }
-- (void)handleRecvData:(NSData*)pBuffer{
-    [self.cacheData appendData:pBuffer];
-//    total+header占用8个字节。 如果数据过来大于8个字节进行解析
-    if (self.cacheData.length > 8) {
-//     total是整个包的长度
-        int64_t totalL = [self unpackRecvDataLen:self.cacheData];
-        
-    }else{
-        [self readMsgPacket];
-    }
-}
-//计算total length
--(int64_t)unpackRecvDataLen:(NSData*)recData
-{
-    //代表没有待处理数据
-    if ([recData length]< 4) {
-        return 0;
-    }
-//    对data转化bytes
-    const unsigned char * p = [recData bytes];
-    int64_t rLen = 0;
-    memcpy(&rLen, p, 4);
-    
-    int64_t totalLen = ntohl(rLen);
-    
-    return totalLen;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  客户端socket断开 （连接失败的回调）
@@ -209,9 +173,7 @@
     {
         //确定当前Socket是连接着的,发送数据
         [self.asyncSocket writeData:packet withTimeout:-1 tag:1];
-    }
-    else
-    {
+    }else{
         if (self.delegate && [self.delegate respondsToSelector:@selector(socketDidDisconnectWithError:)])
         {
             //LQ~ 说明连接失败,要传给外界信号,我连接出错了,其余的事自己搞定
@@ -252,66 +214,4 @@
     
 }
 
-
-
-
-
-
-
-
-
-
--(RACSubject *)sendMessageject{
-    if (_sendMessageject == nil) {
-        _sendMessageject = [RACSubject subject];
-    }
-    return _sendMessageject;
-}
-
-
-/** 关键代码：获取data数据的内容长度和头部长度: index --> 头部占用长度 (头部占用长度1-4个字节) */
-- (int32_t)getContentLength:(NSData *)data withHeadLength:(int32_t *)index{
-    
-    int8_t tmp = [self readRawByte:data headIndex:index];
-    
-    if (tmp >= 0) return tmp;
-    
-    int32_t result = tmp & 0x7f;
-    if ((tmp = [self readRawByte:data headIndex:index]) >= 0) {
-        result |= tmp << 7;
-    } else {
-        result |= (tmp & 0x7f) << 7;
-        if ((tmp = [self readRawByte:data headIndex:index]) >= 0) {
-            result |= tmp << 14;
-        } else {
-            result |= (tmp & 0x7f) << 14;
-            if ((tmp = [self readRawByte:data headIndex:index]) >= 0) {
-                result |= tmp << 21;
-            } else {
-                result |= (tmp & 0x7f) << 21;
-                result |= (tmp = [self readRawByte:data headIndex:index]) << 28;
-                if (tmp < 0) {
-                    for (int i = 0; i < 5; i++) {
-                        if ([self readRawByte:data headIndex:index] >= 0) {
-                            return result;
-                        }
-                    }
-                    
-                    result = -1;
-                }
-            }
-        }
-    }
-    return result;
-}
-
-/** 读取字节 */
-- (int8_t)readRawByte:(NSData *)data headIndex:(int32_t *)index{
-    
-    if (*index >= data.length) return -1;
-    
-    *index = *index + 1;
-    
-    return ((int8_t *)data.bytes)[*index - 1];
-}
 @end

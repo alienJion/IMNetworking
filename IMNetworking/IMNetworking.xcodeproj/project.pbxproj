@@ -26,10 +26,11 @@
 		93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		939DA23822B34311004968E6 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 939DA23722B34311004968E6 /* MessageService.m */; };
+		93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0722B3871600B2E6F2 /* MessageModel.m */; };
+		93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */; };
+		93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */; };
+		93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */; };
 		93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */; };
-		93D3E8D022B3440D00CEB56C /* MessageSendDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */; };
-		93D3E8D322B3446C00CEB56C /* MessageSendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8D222B3446C00CEB56C /* MessageSendModel.m */; };
-		93D3E8D622B349DA00CEB56C /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8D522B349DA00CEB56C /* MessageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,14 +73,17 @@
 		93134A9B22B2AD9300868E39 /* MsgRegistpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgRegistpbobjc.h; sourceTree = "<group>"; };
 		939DA23622B34311004968E6 /* MessageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = "<group>"; };
 		939DA23722B34311004968E6 /* MessageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = "<group>"; };
+		93BF0B0622B3871600B2E6F2 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		93BF0B0722B3871600B2E6F2 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		93BF0B0C22B39F6E00B2E6F2 /* SendMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendMessage.h; sourceTree = "<group>"; };
+		93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessage.m; sourceTree = "<group>"; };
+		93BF0B0F22B39FD500B2E6F2 /* BuilderMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuilderMessage.h; sourceTree = "<group>"; };
+		93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuilderMessage.m; sourceTree = "<group>"; };
+		93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageProtoBuf.h; sourceTree = "<group>"; };
+		93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageProtoBuf.m; sourceTree = "<group>"; };
 		93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageRecDeal.h; sourceTree = "<group>"; };
 		93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageRecDeal.m; sourceTree = "<group>"; };
-		93D3E8CE22B3440D00CEB56C /* MessageSendDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSendDeal.h; sourceTree = "<group>"; };
-		93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSendDeal.m; sourceTree = "<group>"; };
-		93D3E8D122B3446C00CEB56C /* MessageSendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSendModel.h; sourceTree = "<group>"; };
-		93D3E8D222B3446C00CEB56C /* MessageSendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSendModel.m; sourceTree = "<group>"; };
-		93D3E8D422B349DA00CEB56C /* MessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
-		93D3E8D522B349DA00CEB56C /* MessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageManager.m; sourceTree = "<group>"; };
+		93D3E8D722B34D1C00CEB56C /* MessageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageHeader.h; sourceTree = "<group>"; };
 		9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.debug.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,14 +164,17 @@
 		93134A6E22B2AD9300868E39 /* MessageManager */ = {
 			isa = PBXGroup;
 			children = (
-				93D3E8D422B349DA00CEB56C /* MessageManager.h */,
-				93D3E8D522B349DA00CEB56C /* MessageManager.m */,
-				93D3E8D122B3446C00CEB56C /* MessageSendModel.h */,
-				93D3E8D222B3446C00CEB56C /* MessageSendModel.m */,
-				93D3E8CE22B3440D00CEB56C /* MessageSendDeal.h */,
-				93D3E8CF22B3440D00CEB56C /* MessageSendDeal.m */,
+				93BF0B0C22B39F6E00B2E6F2 /* SendMessage.h */,
+				93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */,
+				93BF0B0F22B39FD500B2E6F2 /* BuilderMessage.h */,
+				93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */,
+				93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */,
+				93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */,
+				93D3E8D722B34D1C00CEB56C /* MessageHeader.h */,
 				93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */,
 				93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */,
+				93BF0B0622B3871600B2E6F2 /* MessageModel.h */,
+				93BF0B0722B3871600B2E6F2 /* MessageModel.m */,
 			);
 			path = MessageManager;
 			sourceTree = "<group>";
@@ -231,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				93134A6B22B2AD9300868E39 /* SocketManager */,
-				93134A7B22B2AD9300868E39 /* Protobuf */,
 				93134A6E22B2AD9300868E39 /* MessageManager */,
+				93134A7B22B2AD9300868E39 /* Protobuf */,
 				939DA23422B34123004968E6 /* Service */,
 			);
 			path = MessageService;
@@ -364,15 +371,16 @@
 				93134A5822B2AC9500868E39 /* ViewController.m in Sources */,
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
 				93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */,
-				93D3E8D622B349DA00CEB56C /* MessageManager.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
-				93D3E8D322B3446C00CEB56C /* MessageSendModel.m in Sources */,
+				93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */,
+				93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */,
+				93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */,
 				939DA23822B34311004968E6 /* MessageService.m in Sources */,
 				93134A6322B2AC9500868E39 /* main.m in Sources */,
 				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,
 				93134AA722B2AD9300868E39 /* MsgHeaderpbobjc.m in Sources */,
-				93D3E8D022B3440D00CEB56C /* MessageSendDeal.m in Sources */,
+				93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */,
 				93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */,
 				93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */,
 				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CocoaAsyncSocket/CocoaAsyncSocket-umbrella.h>
-#import "MessageSendDeal.h"
 //首先是定义枚举,记录连接的状态
 typedef NS_ENUM(NSUInteger, LinkStatus)
 {
@@ -40,7 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) GCDAsyncSocket *asyncSocket;
 @property (nonatomic, weak) id<SocketLinkerDelegate> delegate;//连接状态监听
 @property (nonatomic, weak) id <ConnectStateDelegate> connectStateDelegate;
-@property (nonatomic,strong)RACSubject *sendMessageject;
 
 
 //单例

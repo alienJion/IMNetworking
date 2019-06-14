@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MessageManager.h"
+#import "SendMessage.h"//发送消息
 @interface ViewController ()
 @property (nonatomic,strong) NSData *personData;
 @property (nonatomic,strong) SocketManager *socketManager;
@@ -18,9 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _socketManager = [SocketManager shareInstance];
-    [_socketManager.sendMessageject subscribeNext:^(GCDAsyncSocket *sock) {
-        
-    }];
+    
     [_socketManager connectToServer];
 
 }
@@ -28,8 +27,7 @@
     //    if(self.socketManager.socket)
     //
     //        连接成功
-    MessageManager *messageManager = [MessageManager shareInstance];
-    [messageManager sendTextMessage:@"alien" toUser:1223343 ext:nil];
+    [SendMessage sendChatTextMsg:@"hello IM" SenderUid:0 ReceiverUid:0 ChatType:Header_ChatMsgType_Single];
     
 }
 
