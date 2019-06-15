@@ -21,15 +21,16 @@ typedef NS_ENUM(NSUInteger, LinkStatus)
 @protocol SocketLinkerDelegate <NSObject>
 //连接成功
 - (void)socketDidConnectToHost:(NSString *_Nullable)host port:(uint16_t)port;
-//连接失败的代理,外界操作处理,比如停止发送心跳包,申请重连
-- (void)socketDidDisconnectWithError:(NSError *_Nullable)error;
-//读取Socket数据
-- (void)socketDidResponse:(NSData *_Nullable)data;
-@end
-
-@protocol ConnectStateDelegate <NSObject>
 //连接状态改变
 - (void)connectDidChangeConnectState:(LinkStatus )newState;
+//连接失败的代理,外界操作处理,比如停止发送心跳包,申请重连
+- (void)socketDidDisconnectWithError:(NSError *_Nullable)error;
+
+@end
+
+@protocol PacketDelegate <NSObject>
+//读取Socket数据
+- (void)socketDidResponse:(NSData *_Nullable)data;
 @end
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,22 +38,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**连接状态*/
 @property (nonatomic,assign) LinkStatus linkStatus;
 @property(nonatomic,strong) GCDAsyncSocket *asyncSocket;
-@property (nonatomic, weak) id<SocketLinkerDelegate> delegate;//连接状态监听
-@property (nonatomic, weak) id <ConnectStateDelegate> connectStateDelegate;
-
-
-//单例
+@property (nonatomic, weak) id<SocketLinkerDelegate> linkerDelegate;//连接状态监听
+@property (nonatomic, weak) id <PacketDelegate> packetDelegate;//读取数据
 + (SocketManager *)shareInstance;
 //连接
-- (void)connectToServer;
+- (void)connectToHost:(NSString*)host onPort:(uint16_t)port error:(NSError **)errPtr;
 //断开
 - (void)cutOffSocket;
 // 发送数据包
-- (void)sendMsgPacket:(NSData *)packet;
+- (void)sendPacket:(NSData *)packet;
 // 读取消息包
-- (void)readMsgPacket;
+- (void)readPacket;
 //判断Socket连接状态供外界调用
 - (BOOL)isSocketConnected;
+
 @end
 
 NS_ASSUME_NONNULL_END

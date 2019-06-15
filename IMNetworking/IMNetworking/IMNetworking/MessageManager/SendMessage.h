@@ -12,7 +12,7 @@
 #import "BuilderMessage.h"
 #import "MessageProtoBuf.h"
 
-#import "SocketManager.h"
+#import "PacketService.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SendMessage : NSObject
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
                        ReceiverUid:(int64_t)receiverUid
                           ChatType:(Header_ChatMsgType)chatType;
 /**
- 构建图片消息
+ 发送图片消息
  
  @param originalURL 原图
  @param thumbURL 缩略图
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 构建语音消息
+ 发送语音消息
  
  @param URL 语音URL
  @param voiceTime 语音时长
@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 构建抖一抖
+ 发送抖一抖
  
  @param senderUid 发送方
  @param receiverUid 接收方
@@ -67,9 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)sendShakeRequestMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid ChatType:(Header_ChatMsgType)chatType;
 
 /**
- 构建心跳包
+ 发送心跳包
  */
-+(void)builderHeartBeatMsgChatType:(Header_ChatMsgType)chatType;
++(void)sendHeartBeat;
 @end
 
 NS_ASSUME_NONNULL_END

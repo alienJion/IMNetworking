@@ -58,16 +58,16 @@ static MessageRecDeal *_msgRecDeal = nil;
                     //读取完成后对这次数据进行删除
                     [self.cacheData replaceBytesInRange:NSMakeRange(0, headL + placeholderLen + header.bodyLength) withBytes:NULL length:0];
                 }else{
-                    [[SocketManager shareInstance] readMsgPacket];
+                    [[SocketManager shareInstance] readPacket];
                 }
             }else{
-                [[SocketManager shareInstance] readMsgPacket];
+                [[SocketManager shareInstance] readPacket];
             }
         }else{
-           [[SocketManager shareInstance] readMsgPacket];
+           [[SocketManager shareInstance] readPacket];
         }
     }else{
-        [[SocketManager shareInstance] readMsgPacket];
+        [[SocketManager shareInstance] readPacket];
     }
 }
 

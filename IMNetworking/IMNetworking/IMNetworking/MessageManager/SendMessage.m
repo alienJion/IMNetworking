@@ -24,10 +24,10 @@
     ChatTextMsg *chatTextMsg = [BuilderMessage builderChatTextMsg:content SenderUid:senderUid ReceiverUid:receiverUid];
     Header *header = [BuilderMessage builderHeader:(int32_t)[chatTextMsg data].length MsgType:MessageType_ChatTextSend ChatType:chatType];
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[chatTextMsg data] HeaderData:[header data]];
-    [[SocketManager shareInstance] sendMsgPacket:sendData];
+    [[PacketService shareInstance] sendPacket:sendData];
 }
 /**
- 构建图片消息
+ 图片消息
  
  @param originalURL 原图
  @param thumbURL 缩略图
@@ -43,13 +43,13 @@ ChatType:(Header_ChatMsgType)chatType{
     ChatImageMsg *chatImageMsg = [BuilderMessage builderChatImageMsg:originalURL thumbURL:thumbURL SenderUid:senderUid ReceiverUid:receiverUid];
     Header *header = [BuilderMessage builderHeader:(int32_t)[chatImageMsg data].length MsgType:MessageType_ChatImageSend ChatType:chatType];
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[chatImageMsg data] HeaderData:[header data]];
-    [[SocketManager shareInstance] sendMsgPacket:sendData];
+    [[PacketService shareInstance] sendPacket:sendData];
     
 }
 
 
 /**
- 构建语音消息
+ 语音消息
  
  @param URL 语音URL
  @param voiceTime 语音时长
@@ -64,12 +64,12 @@ ChatType:(Header_ChatMsgType)chatType{
    ChatVoiceMsg *chatVoiceMsg = [BuilderMessage builderChatVoiceMsg:URL VoiceTime:voiceTime SenderUid:senderUid ReceiverUid:receiverUid];
     Header *header = [BuilderMessage builderHeader:(int32_t)[chatVoiceMsg data].length MsgType:MessageType_ChatVoiceSend ChatType:chatType];
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[chatVoiceMsg data] HeaderData:[header data]];
-    [[SocketManager shareInstance] sendMsgPacket:sendData];
+    [[PacketService shareInstance] sendPacket:sendData];
 }
 
 
 /**
- 构建抖一抖
+ 抖一抖
  
  @param senderUid 发送方
  @param receiverUid 接收方
@@ -78,17 +78,17 @@ ChatType:(Header_ChatMsgType)chatType{
    ShakeRequestMsg *shakeRequestMsg = [BuilderMessage builderShakeRequestMsgSenderUid:senderUid ReceiverUid:receiverUid];
     Header *header = [BuilderMessage builderHeader:(int32_t)[shakeRequestMsg data].length MsgType:MessageType_ShakeRequest ChatType:chatType];
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[shakeRequestMsg data] HeaderData:[header data]];
-    [[SocketManager shareInstance] sendMsgPacket:sendData];
+    [[PacketService shareInstance] sendPacket:sendData];
 }
 
 /**
- 构建心跳包
+ 心跳包
  
  */
-+(void)builderHeartBeatMsgChatType:(Header_ChatMsgType)chatType{
++(void)sendHeartBeat{
     HeartBeatMsg *heartBeatMsg = [BuilderMessage builderHeartBeatMsg];
-    Header *header = [BuilderMessage builderHeader:(int32_t)[heartBeatMsg data].length MsgType:MessageType_Heartbeat ChatType:chatType];
+    Header *header = [BuilderMessage builderHeader:(int32_t)[heartBeatMsg data].length MsgType:MessageType_Heartbeat ChatType:Header_ChatMsgType_Single];
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[heartBeatMsg data] HeaderData:[header data]];
-    [[SocketManager shareInstance] sendMsgPacket:sendData];
+    [[PacketService shareInstance] sendPacket:sendData];
 }
 @end
