@@ -10,7 +10,7 @@
 #ifndef MessageHeader_h
 #define MessageHeader_h
 
-#import "MessageManager.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "MessageModel.h"//发送消息model
 #import "MessageRecDeal.h"//接收消息处理
 #import "MessageModel.h"

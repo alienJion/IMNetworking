@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "MessageManager.h"
 #import "SendMessage.h"//发送消息
 @interface ViewController ()
 @property (nonatomic,strong) NSData *personData;

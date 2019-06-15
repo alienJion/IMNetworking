@@ -6,6 +6,7 @@
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 #import "SocketManager.h"
+#import "MessageRecDeal.h"
 #define SocketHost @"192.168.1.137"
 //#define SocketHost @"192.168.10.123"
 #define SocketPort 7002
@@ -30,7 +31,6 @@
 // 心跳连接
 - (void)longConnectToSocket
 {
-    [[MessageManager shareInstance] sendBeatMessage];
 }
 
 //全局访问点
@@ -49,7 +49,7 @@
     self = [super init];
     if (self) {
         /**
-         *  LQ~ 初始状态为未连接
+         *  初始状态为未连接
          */
         self.linkStatus = LinkStatus_Unlink;
         self.cacheData = [NSMutableData dataWithCapacity:20];

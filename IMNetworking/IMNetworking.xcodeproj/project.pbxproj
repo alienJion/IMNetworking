@@ -25,6 +25,7 @@
 		93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8C22B2AD9300868E39 /* MsgHeartbeatpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A9422B2AD9300868E39 /* MsgShakepbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		938A5D0B22B5539900C010C4 /* TimeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A5D0A22B5539900C010C4 /* TimeUtilities.m */; };
 		939DA23822B34311004968E6 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 939DA23722B34311004968E6 /* MessageService.m */; };
 		93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0722B3871600B2E6F2 /* MessageModel.m */; };
 		93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */; };
@@ -71,6 +72,9 @@
 		93134A9922B2AD9300868E39 /* MsgHeaderpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgHeaderpbobjc.h; sourceTree = "<group>"; };
 		93134A9A22B2AD9300868E39 /* MsgChatpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgChatpbobjc.h; sourceTree = "<group>"; };
 		93134A9B22B2AD9300868E39 /* MsgRegistpbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgRegistpbobjc.h; sourceTree = "<group>"; };
+		938A5D0922B5539900C010C4 /* TimeUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeUtilities.h; sourceTree = "<group>"; };
+		938A5D0A22B5539900C010C4 /* TimeUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeUtilities.m; sourceTree = "<group>"; };
+		938A5D0C22B5543600C010C4 /* UtilitiesHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilitiesHeader.h; sourceTree = "<group>"; };
 		939DA23622B34311004968E6 /* MessageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = "<group>"; };
 		939DA23722B34311004968E6 /* MessageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = "<group>"; };
 		93BF0B0622B3871600B2E6F2 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		93134A6922B2AD9300868E39 /* IMNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				938A5D0822B5530900C010C4 /* Utilities */,
 				939DA23522B34213004968E6 /* MessageService */,
 				93134A7622B2AD9300868E39 /* Config */,
 			);
@@ -164,13 +169,13 @@
 		93134A6E22B2AD9300868E39 /* MessageManager */ = {
 			isa = PBXGroup;
 			children = (
+				93D3E8D722B34D1C00CEB56C /* MessageHeader.h */,
 				93BF0B0C22B39F6E00B2E6F2 /* SendMessage.h */,
 				93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */,
 				93BF0B0F22B39FD500B2E6F2 /* BuilderMessage.h */,
 				93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */,
 				93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */,
 				93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */,
-				93D3E8D722B34D1C00CEB56C /* MessageHeader.h */,
 				93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */,
 				93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */,
 				93BF0B0622B3871600B2E6F2 /* MessageModel.h */,
@@ -223,6 +228,16 @@
 				93134A8D22B2AD9300868E39 /* MsgTypingpbobjc.m */,
 			);
 			path = Protobuf;
+			sourceTree = "<group>";
+		};
+		938A5D0822B5530900C010C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				938A5D0C22B5543600C010C4 /* UtilitiesHeader.h */,
+				938A5D0922B5539900C010C4 /* TimeUtilities.h */,
+				938A5D0A22B5539900C010C4 /* TimeUtilities.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		939DA23422B34123004968E6 /* Service */ = {
@@ -370,6 +385,7 @@
 			files = (
 				93134A5822B2AC9500868E39 /* ViewController.m in Sources */,
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
+				938A5D0B22B5539900C010C4 /* TimeUtilities.m in Sources */,
 				93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
