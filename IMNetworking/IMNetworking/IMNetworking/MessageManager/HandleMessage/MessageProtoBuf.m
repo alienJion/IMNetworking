@@ -6,7 +6,7 @@
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
-#import "MessageProtoBuf.h"
+#import "MessageProtoBuf.h"//构建协议转化protoBuf
 
 @implementation MessageProtoBuf
 /**

@@ -7,7 +7,8 @@
 //
 
 #import "PacketService.h"//数据包服务
-#import "MessageRecDeal.h"
+#import "AnalysisMessage.h"//解析消息
+#import "ReceiveMessage.h"//接收解析过的消息
 
 @interface PacketService()<PacketDelegate>
 @property (nonatomic,strong) SocketManager *socketManager;
@@ -36,11 +37,10 @@
 #pragma mark-----------Delegate------------
 //收到消息
 - (void)socketDidResponse:(NSData * _Nullable)data {
-#warning 记得对接收数据进行重新梳理封装
-    MessageRecDeal *messageRecDeal = [MessageRecDeal shareInstance];
-    [messageRecDeal handleRecvData:data];
-    [messageRecDeal.dataSubject subscribeNext:^(id  _Nullable x) {
-        
+    AnalysisMessage *analysisMsg = [AnalysisMessage shareInstance];
+    [analysisMsg handleRecvData:data];
+    [analysisMsg.analysisMsgSubject subscribeNext:^(MessageModel *msgModel) {
+        [[self msgModelSubject] sendNext:msgModel];
     }];
 }
 
@@ -60,5 +60,11 @@
 - (void)readPacket{
     [self.socketManager readPacket];
 
+}
+-(RACSubject *)msgModelSubject{
+    if(_msgModelSubject == nil){
+        _msgModelSubject = [RACSubject subject];
+    }
+    return _msgModelSubject;
 }
 @end

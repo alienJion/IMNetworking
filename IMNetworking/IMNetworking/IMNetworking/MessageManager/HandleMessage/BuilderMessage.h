@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "MsgChatpbobjc.h"
-#import "MsgHeaderpbobjc.h"
-#import "BuilderMessage.h"
-#import "MsgShakepbobjc.h"
-#import "MsgHeartbeatpbobjc.h"
+//#import "MsgHeaderpbobjc.h"
+//#import "BuilderMessage.h"
+//#import "MsgShakepbobjc.h"
+//#import "MsgHeartbeatpbobjc.h"
+#import "HandleMsgHeader.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BuilderMessage : NSObject
@@ -66,6 +67,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 +(ShakeRequestMsg *)builderShakeRequestMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid;
 
+/**
+ 构建正在输入
+ 
+ @return 正在输入
+ */
++(TypingRequestMsg *)buildertTypingMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid;
 /**
  构建心跳包
 

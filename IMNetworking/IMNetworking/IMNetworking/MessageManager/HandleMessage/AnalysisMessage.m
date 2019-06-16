@@ -1,27 +1,30 @@
 //
-//  MessageRecDeal.m
+//  AnalysisMessage.m
 //  IMNetworking
 //
-//  Created by Alien on 2019/6/14.
+//  Created by Alien on 2019/6/16.
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
-#import "MessageRecDeal.h"//接收消息处理
+#import "AnalysisMessage.h"//解析消息
+
+
 #define TotalLen 4
 #define HeadLen 4
 
-@interface MessageRecDeal()
+@interface AnalysisMessage()
 @property (nonatomic,strong) NSMutableData *cacheData;
 @end
-@implementation MessageRecDeal
-static MessageRecDeal *_msgRecDeal = nil;
-+ (MessageRecDeal *)shareInstance
-{
+@implementation AnalysisMessage
+
+//全局访问点
++ (AnalysisMessage *)shareInstance {
+    static AnalysisMessage *_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _msgRecDeal = [[MessageRecDeal alloc] init];
+        _instance = [[self alloc] init];
     });
-    return _msgRecDeal;
+    return _instance;
 }
 - (instancetype)init
 {
@@ -43,18 +46,16 @@ static MessageRecDeal *_msgRecDeal = nil;
             NSLog(@"headLength ====== %lld",headL);
             if (headL + placeholderLen < self.cacheData.length) {
                 Header *header = [self handleHeaderDataLenght:headL];
-                MessageModel *model = [[MessageModel alloc]init];
-                model.msgHeader = header;
+                MessageModel *msgModel = [[MessageModel alloc]init];
+                msgModel.msgHeader = header;
                 if((placeholderLen + headL + header.bodyLength) <= self.cacheData.length){
                     if(header.bodyLength == 0){
-                        
+//                        没有接收到body信息
                     }else{
                         NSData *bodyData = [self.cacheData subdataWithRange:NSMakeRange(placeholderLen + headL, header.bodyLength)];
-//                        model 解析
-                        ChatTextMsg *msg = [[ChatTextMsg alloc]initWithData:bodyData error:nil];
-                        NSLog(@"%@",msg);
+                        msgModel.msgBodyData = bodyData;
                     }
-                    [self.dataSubject sendNext:model];
+                    [self.analysisMsgSubject sendNext:msgModel];
                     //读取完成后对这次数据进行删除
                     [self.cacheData replaceBytesInRange:NSMakeRange(0, headL + placeholderLen + header.bodyLength) withBytes:NULL length:0];
                 }else{
@@ -64,7 +65,7 @@ static MessageRecDeal *_msgRecDeal = nil;
                 [[SocketManager shareInstance] readPacket];
             }
         }else{
-           [[SocketManager shareInstance] readPacket];
+            [[SocketManager shareInstance] readPacket];
         }
     }else{
         [[SocketManager shareInstance] readPacket];
@@ -119,17 +120,17 @@ static MessageRecDeal *_msgRecDeal = nil;
     //    对data转化bytes
     const unsigned char * p = [recData bytes];
     int64_t rLen = 0;
-//   对p拷贝PackageTotalLen个字节到rlen
+    //   对p拷贝PackageTotalLen个字节到rlen
     memcpy(&rLen, p, len);
-//    进行字节对齐处理
+    //    进行字节对齐处理
     int64_t totalLen = ntohl(rLen);
     
     return totalLen;
 }
--(RACSubject *)dataSubject{
-    if (_dataSubject == nil) {
-        _dataSubject = [RACSubject subject];
+-(RACSubject *)analysisMsgSubject{
+    if (_analysisMsgSubject == nil) {
+        _analysisMsgSubject = [RACSubject subject];
     }
-    return _dataSubject;
+    return _analysisMsgSubject;
 }
 @end

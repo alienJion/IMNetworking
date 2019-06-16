@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SocketManager.h"
-
+#import "MessageHeader.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PacketService : NSObject
@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendPacket:(NSData *)packet;
 // 读取消息包
 - (void)readPacket;
+@property (nonatomic,strong) RACSubject *msgModelSubject;
 @end
 
 NS_ASSUME_NONNULL_END

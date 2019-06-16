@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param thumbURL 缩略图
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendChatImageMsg:(NSString *)originalURL
                             thumbURL:(NSString *)thumbURL
@@ -50,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param voiceTime 语音时长
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendChatVoiceMsg:(NSString *)URL
                            VoiceTime:(int32_t)voiceTime
@@ -63,13 +67,23 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendShakeRequestMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid ChatType:(Header_ChatMsgType)chatType;
-
+/**
+ 正在输入
+ 
+ @param senderUid 发送方
+ @param receiverUid 接收方
+ @param chatType 聊天类型
+ */
++(void)sendTypingSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid ChatType:(Header_ChatMsgType)chatType;
 /**
  发送心跳包
  */
 +(void)sendHeartBeat;
+
 @end
 
 NS_ASSUME_NONNULL_END

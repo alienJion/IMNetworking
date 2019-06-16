@@ -33,6 +33,8 @@
  @param thumbURL 缩略图
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendChatImageMsg:(NSString *)originalURL
 thumbURL:(NSString *)thumbURL
@@ -55,6 +57,8 @@ ChatType:(Header_ChatMsgType)chatType{
  @param voiceTime 语音时长
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendChatVoiceMsg:(NSString *)URL
 VoiceTime:(int32_t)voiceTime
@@ -73,6 +77,8 @@ ChatType:(Header_ChatMsgType)chatType{
  
  @param senderUid 发送方
  @param receiverUid 接收方
+ @param chatType 聊天类型
+
  */
 +(void)sendShakeRequestMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid ChatType:(Header_ChatMsgType)chatType{
    ShakeRequestMsg *shakeRequestMsg = [BuilderMessage builderShakeRequestMsgSenderUid:senderUid ReceiverUid:receiverUid];
@@ -81,6 +87,19 @@ ChatType:(Header_ChatMsgType)chatType{
     [[PacketService shareInstance] sendPacket:sendData];
 }
 
+/**
+ 正在输入
+
+ @param senderUid 发送方
+ @param receiverUid 接收方
+ @param chatType 聊天类型
+ */
++(void)sendTypingSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid ChatType:(Header_ChatMsgType)chatType{
+    TypingRequestMsg *heartBeatMsg = [BuilderMessage buildertTypingMsgSenderUid:senderUid ReceiverUid:receiverUid];
+    Header *header = [BuilderMessage builderHeader:(int32_t)[heartBeatMsg data].length MsgType:MessageType_TypingRequest ChatType:chatType];
+    NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[heartBeatMsg data] HeaderData:[header data]];
+    [[PacketService shareInstance] sendPacket:sendData];
+}
 /**
  心跳包
  
@@ -91,4 +110,5 @@ ChatType:(Header_ChatMsgType)chatType{
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[heartBeatMsg data] HeaderData:[header data]];
     [[PacketService shareInstance] sendPacket:sendData];
 }
+
 @end

@@ -30,9 +30,10 @@
 		93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */; };
 		93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */; };
 		93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */; };
-		93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */; };
 		93DAD54F22B55B54006FBBE3 /* LinkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD54E22B55B54006FBBE3 /* LinkService.m */; };
 		93DAD55222B55D0E006FBBE3 /* PacketService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD55122B55D0E006FBBE3 /* PacketService.m */; };
+		93DAD55622B5DE92006FBBE3 /* AnalysisMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD55522B5DE92006FBBE3 /* AnalysisMessage.m */; };
+		93DAD55922B5FEE9006FBBE3 /* ReceiveMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD55822B5FEE9006FBBE3 /* ReceiveMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,13 +85,16 @@
 		93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuilderMessage.m; sourceTree = "<group>"; };
 		93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageProtoBuf.h; sourceTree = "<group>"; };
 		93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageProtoBuf.m; sourceTree = "<group>"; };
-		93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageRecDeal.h; sourceTree = "<group>"; };
-		93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageRecDeal.m; sourceTree = "<group>"; };
 		93D3E8D722B34D1C00CEB56C /* MessageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageHeader.h; sourceTree = "<group>"; };
 		93DAD54D22B55B54006FBBE3 /* LinkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkService.h; sourceTree = "<group>"; };
 		93DAD54E22B55B54006FBBE3 /* LinkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkService.m; sourceTree = "<group>"; };
 		93DAD55022B55D0E006FBBE3 /* PacketService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketService.h; sourceTree = "<group>"; };
 		93DAD55122B55D0E006FBBE3 /* PacketService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketService.m; sourceTree = "<group>"; };
+		93DAD55422B5DE92006FBBE3 /* AnalysisMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalysisMessage.h; sourceTree = "<group>"; };
+		93DAD55522B5DE92006FBBE3 /* AnalysisMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalysisMessage.m; sourceTree = "<group>"; };
+		93DAD55722B5FEE9006FBBE3 /* ReceiveMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveMessage.h; sourceTree = "<group>"; };
+		93DAD55822B5FEE9006FBBE3 /* ReceiveMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveMessage.m; sourceTree = "<group>"; };
+		93E6B64822B60669004C0F39 /* HandleMsgHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandleMsgHeader.h; sourceTree = "<group>"; };
 		9AEC9101EBE22881DF8470AC /* Pods-IMNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.debug.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -176,6 +180,8 @@
 				93D3E8D722B34D1C00CEB56C /* MessageHeader.h */,
 				93BF0B0C22B39F6E00B2E6F2 /* SendMessage.h */,
 				93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */,
+				93DAD55722B5FEE9006FBBE3 /* ReceiveMessage.h */,
+				93DAD55822B5FEE9006FBBE3 /* ReceiveMessage.m */,
 				93DAD55322B57655006FBBE3 /* HandleMessage */,
 			);
 			path = MessageManager;
@@ -252,7 +258,6 @@
 		939DA23522B34213004968E6 /* MessageService */ = {
 			isa = PBXGroup;
 			children = (
-				93134A7B22B2AD9300868E39 /* Protobuf */,
 				939DA23422B34123004968E6 /* Service */,
 			);
 			path = MessageService;
@@ -261,12 +266,14 @@
 		93DAD55322B57655006FBBE3 /* HandleMessage */ = {
 			isa = PBXGroup;
 			children = (
+				93E6B64822B60669004C0F39 /* HandleMsgHeader.h */,
+				93134A7B22B2AD9300868E39 /* Protobuf */,
 				93BF0B0F22B39FD500B2E6F2 /* BuilderMessage.h */,
 				93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */,
 				93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */,
 				93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */,
-				93D3E8CB22B343DF00CEB56C /* MessageRecDeal.h */,
-				93D3E8CC22B343DF00CEB56C /* MessageRecDeal.m */,
+				93DAD55422B5DE92006FBBE3 /* AnalysisMessage.h */,
+				93DAD55522B5DE92006FBBE3 /* AnalysisMessage.m */,
 				93BF0B0622B3871600B2E6F2 /* MessageModel.h */,
 				93BF0B0722B3871600B2E6F2 /* MessageModel.m */,
 			);
@@ -399,7 +406,6 @@
 				93134A5822B2AC9500868E39 /* ViewController.m in Sources */,
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
 				938A5D0B22B5539900C010C4 /* TimeUtilities.m in Sources */,
-				93D3E8CD22B343DF00CEB56C /* MessageRecDeal.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
 				93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */,
@@ -415,8 +421,10 @@
 				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,
 				93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */,
 				93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */,
+				93DAD55922B5FEE9006FBBE3 /* ReceiveMessage.m in Sources */,
 				93DAD55222B55D0E006FBBE3 /* PacketService.m in Sources */,
 				93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */,
+				93DAD55622B5DE92006FBBE3 /* AnalysisMessage.m in Sources */,
 				93134AAA22B2AD9300868E39 /* MsgLogoutpbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

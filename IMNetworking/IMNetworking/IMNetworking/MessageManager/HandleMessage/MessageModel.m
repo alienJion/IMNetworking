@@ -6,7 +6,7 @@
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
-#import "MessageModel.h"
+#import "MessageModel.h"//消息model
 
 @implementation MessageModel
 

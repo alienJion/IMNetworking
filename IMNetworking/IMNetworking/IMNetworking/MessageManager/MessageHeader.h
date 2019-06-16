@@ -11,7 +11,9 @@
 #define MessageHeader_h
 
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "MessageModel.h"//发送消息model
-#import "MessageRecDeal.h"//接收消息处理
-#import "MessageModel.h"
+#import "MessageModel.h"//消息model
+#import "SendMessage.h"//发送消息
+#import "ReceiveMessage.h"//接收消息
+#import "BuilderMessage.h"
+
 #endif /* MessageHeader_h */

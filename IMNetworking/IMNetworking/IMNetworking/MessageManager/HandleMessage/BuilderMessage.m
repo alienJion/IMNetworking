@@ -92,7 +92,17 @@
 }
 
 
-
+/**
+ 构建正在输入
+ 
+ @return 正在输入
+ */
++(TypingRequestMsg *)buildertTypingMsgSenderUid:(int64_t)senderUid ReceiverUid:(int64_t)receiverUid{
+    TypingRequestMsg *typingMsg = [TypingRequestMsg new];
+    typingMsg.senderUid = senderUid;
+    typingMsg.receiverUid = receiverUid;
+    return typingMsg;
+}
 
 
 
