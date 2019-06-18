@@ -103,17 +103,32 @@
     typingMsg.receiverUid = receiverUid;
     return typingMsg;
 }
+/**
+ 构建握手消息
+ 
+ @return 握手
+ */
++(HandShakeRequestMsg *)builderHandShakeRequestMsg{
+    HandShakeRequestMsg *handShakeMsg = [HandShakeRequestMsg new];
+    return handShakeMsg;
+}
 
 
-
-
-
+/**
+ 构建header
+ 
+ @param bodyLen body的长度
+ @param msgType 消息类型
+ @param chatType 聊天类型
+ @return header对象
+ */
 +(Header *)builderHeader:(int32_t)bodyLen MsgType:(MessageType)msgType ChatType:(Header_ChatMsgType)chatType  {
     Header *header = [[Header alloc]init];
     header.msgType = msgType;
     header.bodyLength = bodyLen;
     header.chatMsgType = chatType;
     header.protocolVersion = 1.0;
+    header.token = @"";
     header.clientType = Header_ClientType_Iphone;
     header.time = [TimeUtilities getNowTimeTimestamp].longLongValue * 1000;
     header.deviceId = @"iOSdeviceId";

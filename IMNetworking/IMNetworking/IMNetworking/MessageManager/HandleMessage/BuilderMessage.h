@@ -81,6 +81,13 @@ NS_ASSUME_NONNULL_BEGIN
 +(HeartBeatMsg *)builderHeartBeatMsg;
 
 /**
+ 构建握手消息
+ 
+ @return 握手
+ */
++(HandShakeRequestMsg *)builderHandShakeRequestMsg;
+
+/**
  构建header
 
  @param bodyLen body的长度

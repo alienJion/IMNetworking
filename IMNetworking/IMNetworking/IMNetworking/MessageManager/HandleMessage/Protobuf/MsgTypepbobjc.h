@@ -105,10 +105,10 @@ typedef GPB_ENUM(MessageType) {
   /** 返回注册结果 */
   MessageType_RegistResponse = 20000009,
 
-  /** 消息同步请求 */
+  /** 握手消息 */
   MessageType_MsgHandshakeRequest = 10000010,
 
-  /** 消息同步结果 */
+  /** 握手消息反馈 */
   MessageType_MsgHandshakeResponse = 20000010,
 
   /** 登出请求 */

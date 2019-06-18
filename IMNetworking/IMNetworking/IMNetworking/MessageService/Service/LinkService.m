@@ -12,6 +12,8 @@
 #define BeatTime 3.0   //发送心跳时间。秒
 
 @interface LinkService()<SocketLinkerDelegate>
+@property(nonatomic,copy)ResultBlock resultBlock;
+
 @property (nonatomic,strong) SocketManager *socketManager;
 @property (nonatomic,strong) NSString *host;//地址
 @property (nonatomic,assign) uint64_t port;//端口
@@ -38,18 +40,26 @@
 #pragma mark-----------Delegate------------
 //连接状态改变
 - (void)connectDidChangeConnectState:(LinkStatus)newState {
+    
     NSLog(@"当前链接状态：%ld",newState);
     self.linkStatus = newState;
 }
 //连接成功
 - (void)socketDidConnectToHost:(NSString * _Nullable)host port:(uint16_t)port {
     NSLog(@"链接成功");
+    if (self.resultBlock) {
+        self.resultBlock(LinkResult_Success);
+    }
+    [SendMessage sendHandShakeRequestMsg];//发送握手消息
 //    创建心跳定时器
     [self beatTimer];
 }
 //连接失败
 - (void)socketDidDisconnectWithError:(NSError * _Nullable)error {
     NSLog(@"链接失败");
+    if (self.resultBlock) {
+        self.resultBlock(LinkResult_Error);
+    }
 //    重新链接服务器
     [self reConnectServer];
 }
@@ -57,7 +67,8 @@
 
 #pragma mark-----------Func----------------
 //链接服务器
--(void)connectToHost:(NSString *)host onPort:(uint16_t)port{
+- (void)connectToHost:(NSString*)host onPort:(uint16_t)port result:(ResultBlock )resultBlock{
+    self.resultBlock = resultBlock;
     self.host = host;
     self.port = port;
     [self connectServer];

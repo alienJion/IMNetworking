@@ -36,6 +36,10 @@
  被踢下线
  */
 -(void)receiveLogoutRequestMsg:(LogoutRequestMsg *_Nullable)logoutRequestMsg;
+/**
+ 消息发送成功
+ */
+-(void)receiveSendMsgsuccess;
 @end
 
 NS_ASSUME_NONNULL_BEGIN

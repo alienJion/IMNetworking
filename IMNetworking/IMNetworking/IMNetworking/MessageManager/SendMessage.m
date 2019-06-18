@@ -110,5 +110,13 @@ ChatType:(Header_ChatMsgType)chatType{
     NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[heartBeatMsg data] HeaderData:[header data]];
     [[PacketService shareInstance] sendPacket:sendData];
 }
-
+/**
+ 发送握手消息
+ */
++(void)sendHandShakeRequestMsg{
+    HandShakeRequestMsg *handShakeMsg = [BuilderMessage builderHandShakeRequestMsg];
+    Header *header = [BuilderMessage builderHeader:(int32_t)[handShakeMsg data].length MsgType:MessageType_MsgHandshakeRequest ChatType:Header_ChatMsgType_Single];
+    NSData *sendData = [MessageProtoBuf builderProtoBufMessage:[handShakeMsg data] HeaderData:[header data]];
+    [[PacketService shareInstance] sendPacket:sendData];
+}
 @end

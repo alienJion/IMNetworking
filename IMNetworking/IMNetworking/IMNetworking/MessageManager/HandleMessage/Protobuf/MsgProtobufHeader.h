@@ -18,5 +18,5 @@
 #import "MsgStatuscodepbobjc.h"//状态码
 #import "MsgTypepbobjc.h"//类型
 #import "MsgTypingpbobjc.h"//正在输入
-
+#import "MsgHandshakepbobjc.h"//握手消息
 #endif /* MsgProtobufHeader_h */

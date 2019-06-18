@@ -29,6 +29,7 @@
 		93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0722B3871600B2E6F2 /* MessageModel.m */; };
 		93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */; };
 		93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */; };
+		93C114A022B8E29B00D95C15 /* MsgHandshakepbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C1149F22B8E29B00D95C15 /* MsgHandshakepbobjc.m */; };
 		93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */; };
 		93DAD54F22B55B54006FBBE3 /* LinkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD54E22B55B54006FBBE3 /* LinkService.m */; };
 		93DAD55222B55D0E006FBBE3 /* PacketService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DAD55122B55D0E006FBBE3 /* PacketService.m */; };
@@ -83,6 +84,8 @@
 		93BF0B0D22B39F6E00B2E6F2 /* SendMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessage.m; sourceTree = "<group>"; };
 		93BF0B0F22B39FD500B2E6F2 /* BuilderMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuilderMessage.h; sourceTree = "<group>"; };
 		93BF0B1022B39FD500B2E6F2 /* BuilderMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuilderMessage.m; sourceTree = "<group>"; };
+		93C1149E22B8E29B00D95C15 /* MsgHandshakepbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgHandshakepbobjc.h; sourceTree = "<group>"; };
+		93C1149F22B8E29B00D95C15 /* MsgHandshakepbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgHandshakepbobjc.m; sourceTree = "<group>"; };
 		93CAB0D922B3ACB200289E7E /* MessageProtoBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageProtoBuf.h; sourceTree = "<group>"; };
 		93CAB0DA22B3ACB200289E7E /* MessageProtoBuf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageProtoBuf.m; sourceTree = "<group>"; };
 		93D3E8D722B34D1C00CEB56C /* MessageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageHeader.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				93134A8122B2AD9300868E39 /* MsgProtobufHeader.h */,
+				93C1149E22B8E29B00D95C15 /* MsgHandshakepbobjc.h */,
+				93C1149F22B8E29B00D95C15 /* MsgHandshakepbobjc.m */,
 				93134A9A22B2AD9300868E39 /* MsgChatpbobjc.h */,
 				93134A8422B2AD9300868E39 /* MsgChatpbobjc.m */,
 				93134A9922B2AD9300868E39 /* MsgHeaderpbobjc.h */,
@@ -416,6 +421,7 @@
 				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,
 				93134AA722B2AD9300868E39 /* MsgHeaderpbobjc.m in Sources */,
 				93BF0B0E22B39F6E00B2E6F2 /* SendMessage.m in Sources */,
+				93C114A022B8E29B00D95C15 /* MsgHandshakepbobjc.m in Sources */,
 				93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */,
 				93134AA622B2AD9300868E39 /* MsgRegistpbobjc.m in Sources */,
 				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,

@@ -23,32 +23,70 @@
 -(void)receiveMessage{
     [[PacketService shareInstance].msgModelSubject subscribeNext:^(MessageModel *model) {
         if (self.recMsgDelegate) {
-            switch (model.msgHeader.msgType) {
-                case MessageType_ChatTextSend://文本消息
-                    [self chatTextMsg:model];
+            switch (model.msgHeader.statusCode) {//状态
+                case StatusCode_Success://成功
+                    [self dealMessageType:model];
                     break;
-                case MessageType_ChatImageSend://图片消息
-                    [self chatImageMsg:model];
+                case StatusCode_TokenInvalid://token失效
+//                    弹出登录
                     break;
-                case MessageType_ChatVoiceSend://语音消息
-                    [self chatVoiceMsg:model];
+                case StatusCode_Failed://失败
+                    
                     break;
-                case MessageType_ShakeRequest://抖一抖
-                    [self shakeMsg:model];
+                case StatusCode_HaspendingCtrlMsg://有正在处理的控制信息
+                    
                     break;
-                case MessageType_TypingRequest://正在输入
-                    [self typingMsg:model];
+                case StatusCode_NotLogin://未登录
+//                    弹出登录
                     break;
-                case MessageType_LogoutResponse://正在输入
-                    [self logoutMsg:model];
+                case StatusCode_UserHasOnlineInvalid: /** 用户在其他设备上已登录 */
+//                    强制退出
                     break;
                 default:
-                    NSLog(@"%s中对应的消息类型：%d",__func__,model.msgHeader.msgType);
                     break;
             }
         }
     }];
 }
+//处理消息类型
+-(void)dealMessageType:(MessageModel *)model{
+    switch (model.msgHeader.msgType) {
+        case MessageType_ChatTextSend://文本消息
+            [self chatTextMsg:model];
+            break;
+        case MessageType_ChatImageSend://图片消息
+            [self chatImageMsg:model];
+            break;
+        case MessageType_ChatVoiceSend://语音消息
+            [self chatVoiceMsg:model];
+            break;
+        case MessageType_ShakeRequest://抖一抖
+            [self shakeMsg:model];
+            break;
+        case MessageType_TypingRequest://正在输入
+            [self typingMsg:model];
+            break;
+//        case MessageType_LogoutResponse://退出登录
+//            [self logoutMsg:model];
+//            break;
+//        case MessageType_HeartbeatAck://心跳反馈
+//            //                    心跳反馈暂时不做处理
+//            break;
+//        case MessageType_MsgHandshakeResponse://握手消息反馈
+//
+//            break;
+        case MessageType_ChatAck://聊天消息反馈
+            [self sendMessageSuccess];
+            break;
+            
+        default:
+            NSLog(@"%s中对应的消息类型：%d",__func__,model.msgHeader.msgType);
+            break;
+    }
+}
+
+
+
 
 -(void)chatTextMsg:(MessageModel *)model{
     if([self.recMsgDelegate respondsToSelector:@selector(receiveChatTextMsg:)]){
@@ -86,16 +124,11 @@
         [self.recMsgDelegate receiveLogoutRequestMsg:logoutMsgModel];
     }
 }
-
-
-
-
-
-
-
-
-
-
+-(void)sendMessageSuccess{
+    if ([self.recMsgDelegate respondsToSelector:@selector(receiveSendMsgsuccess)]) {
+        [self.recMsgDelegate receiveSendMsgsuccess];
+    }
+}
 // 读取消息包
 - (void)readPacket{
     [[PacketService shareInstance] readPacket];

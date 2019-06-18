@@ -29,10 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[LinkService shareInstance] connectToHost:SocketHost onPort:SocketPort];
-    if ([LinkService shareInstance].isSocketConnected == YES) {
-        [[self recMessage] readPacket];
-    }
+    [[LinkService shareInstance] connectToHost:SocketHost onPort:SocketPort result:^(LinkResultType linkResultType) {
+        if (linkResultType == LinkResult_Success) {
+//            [SendMessage sendHandShakeRequestMsg];//发送握手消息
+            [[self recMessage] readPacket];
+        }else{
+            NSLog(@"链接服务器失败");
+        }
+    }];
+    
     
     
     
@@ -86,6 +91,11 @@
 - (void)receiveTypingRequestMsg:(TypingRequestMsg * _Nullable)typingRequestMsg {
     
 }
-
+/**
+ 消息发送成功
+ */
+-(void)receiveSendMsgsuccess{
+    NSLog(@"消息发送成功");
+}
 
 @end

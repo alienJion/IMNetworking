@@ -83,7 +83,10 @@ NS_ASSUME_NONNULL_BEGIN
  发送心跳包
  */
 +(void)sendHeartBeat;
-
+/**
+ 发送握手消息
+ */
++(void)sendHandShakeRequestMsg;
 @end
 
 NS_ASSUME_NONNULL_END
