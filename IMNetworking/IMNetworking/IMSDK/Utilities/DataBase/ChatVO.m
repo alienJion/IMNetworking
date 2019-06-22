@@ -85,6 +85,8 @@
 
 -(RLMRealm *)realm{
     if (_realm == nil) {
+        NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSLog(@"文件路径：%@",docPath);
         _realm = [RLMRealm defaultRealm];
     }
     return _realm;

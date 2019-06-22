@@ -50,7 +50,32 @@
     
 //    [SendMessage sendChatTextMsg:@"hello IM" SenderUid:0 ReceiverUid:0 ChatType:Header_ChatMsgType_Single];
  
+    ChatVO *chatvo = [ChatVO shareInstance];
     
+    [chatvo deleteAllObjects];
+    NSLog(@"开始");
+    for (int i = 0; i < 20000; i++) {
+        ChatModel *model = [[ChatModel alloc]init];
+        model.message_id = @"messageId";
+        model.message_type = @"message_type";
+        model.send_user_id = @"send_user_id";
+        model.send_user_nickName = @"send_user_nickName";
+        model.send_user_img = @"send_user_img";
+        model.reciever_user_id = @"reciever_user_id";
+        model.reciever_user_img = @"reciever_user_img";
+        model.reciever_user_nickName = @"reciever_user_nickName";
+        model.reciever_user_img = @"reciever_user_img";
+        model.time = @"time";
+        model.read_status = i;
+        model.message_content = @"hello Realm";
+        model.session_id = @"100";
+        [chatvo addChatVO:model];
+    }
+    NSLog(@"结束");
+
+    NSLog(@"%@",[chatvo allObjects]);
+    NSLog(@"结束了");
+
 }
 -(ReceiveMessage *)recMessage{
     if (_recMessage == nil) {
