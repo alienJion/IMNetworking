@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05C62D694901E75758854418 /* Pods_IMNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */; };
+		42AC7B5622BE1913008C2393 /* ChatVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AC7B5522BE1913008C2393 /* ChatVO.m */; };
+		42AC7B5922BE1931008C2393 /* RealmChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AC7B5822BE1931008C2393 /* RealmChatModel.m */; };
 		93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A5422B2AC9500868E39 /* AppDelegate.m */; };
 		93134A5822B2AC9500868E39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A5722B2AC9500868E39 /* ViewController.m */; };
 		93134A5B22B2AC9500868E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5922B2AC9500868E39 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.release.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		42AC7B5422BE1913008C2393 /* ChatVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVO.h; sourceTree = "<group>"; };
+		42AC7B5522BE1913008C2393 /* ChatVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVO.m; sourceTree = "<group>"; };
+		42AC7B5722BE1931008C2393 /* RealmChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmChatModel.h; sourceTree = "<group>"; };
+		42AC7B5822BE1931008C2393 /* RealmChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmChatModel.m; sourceTree = "<group>"; };
 		93134A5022B2AC9500868E39 /* IMNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93134A5322B2AC9500868E39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93134A5422B2AC9500868E39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +128,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42AC7B5222BE181A008C2393 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				42AC7B5422BE1913008C2393 /* ChatVO.h */,
+				42AC7B5522BE1913008C2393 /* ChatVO.m */,
+				42AC7B5722BE1931008C2393 /* RealmChatModel.h */,
+				42AC7B5822BE1931008C2393 /* RealmChatModel.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		42AC7B5322BE1824008C2393 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				938A5D0922B5539900C010C4 /* TimeUtilities.h */,
+				938A5D0A22B5539900C010C4 /* TimeUtilities.m */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
 		93134A4722B2AC9500868E39 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +169,7 @@
 		93134A5222B2AC9500868E39 /* IMNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				93134A6922B2AD9300868E39 /* IMNetworking */,
+				93134A6922B2AD9300868E39 /* IMSDK */,
 				93134A5322B2AC9500868E39 /* AppDelegate.h */,
 				93134A5422B2AC9500868E39 /* AppDelegate.m */,
 				93134A5622B2AC9500868E39 /* ViewController.h */,
@@ -157,7 +183,7 @@
 			path = IMNetworking;
 			sourceTree = "<group>";
 		};
-		93134A6922B2AD9300868E39 /* IMNetworking */ = {
+		93134A6922B2AD9300868E39 /* IMSDK */ = {
 			isa = PBXGroup;
 			children = (
 				938A5D0822B5530900C010C4 /* Utilities */,
@@ -165,7 +191,7 @@
 				939DA23522B34213004968E6 /* MessageService */,
 				93134A7622B2AD9300868E39 /* Config */,
 			);
-			path = IMNetworking;
+			path = IMSDK;
 			sourceTree = "<group>";
 		};
 		93134A6B22B2AD9300868E39 /* SocketManager */ = {
@@ -242,8 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				938A5D0C22B5543600C010C4 /* UtilitiesHeader.h */,
-				938A5D0922B5539900C010C4 /* TimeUtilities.h */,
-				938A5D0A22B5539900C010C4 /* TimeUtilities.m */,
+				42AC7B5322BE1824008C2393 /* Time */,
+				42AC7B5222BE181A008C2393 /* DataBase */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -412,10 +438,12 @@
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
 				938A5D0B22B5539900C010C4 /* TimeUtilities.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
+				42AC7B5622BE1913008C2393 /* ChatVO.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
 				93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */,
 				93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */,
 				93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */,
+				42AC7B5922BE1931008C2393 /* RealmChatModel.m in Sources */,
 				93DAD54F22B55B54006FBBE3 /* LinkService.m in Sources */,
 				93134A6322B2AC9500868E39 /* main.m in Sources */,
 				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,

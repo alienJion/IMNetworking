@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-IMNetworking/Pods-IMNetworking-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework
+${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework

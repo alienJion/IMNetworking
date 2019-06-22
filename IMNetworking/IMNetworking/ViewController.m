@@ -17,6 +17,10 @@
 //#define SocketHost @"192.168.10.123"
 #define SocketPort 7002
 
+
+
+#import "ChatVO.h"
+
 @interface ViewController ()<RecMsgDelegate>
 @property (nonatomic,strong) NSData *personData;
 @property (nonatomic,strong) SocketManager *socketManager;
@@ -29,14 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[LinkService shareInstance] connectToHost:SocketHost onPort:SocketPort result:^(LinkResultType linkResultType) {
-        if (linkResultType == LinkResult_Success) {
-//            [SendMessage sendHandShakeRequestMsg];//发送握手消息
-            [[self recMessage] readPacket];
-        }else{
-            NSLog(@"链接服务器失败");
-        }
-    }];
+//    [[LinkService shareInstance] connectToHost:SocketHost onPort:SocketPort result:^(LinkResultType linkResultType) {
+//        if (linkResultType == LinkResult_Success) {
+////            [SendMessage sendHandShakeRequestMsg];//发送握手消息
+//            [[self recMessage] readPacket];
+//        }else{
+//            NSLog(@"链接服务器失败");
+//        }
+//    }];
     
     
     
@@ -44,7 +48,19 @@
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [SendMessage sendChatTextMsg:@"hello IM" SenderUid:0 ReceiverUid:0 ChatType:Header_ChatMsgType_Single];
+//    [SendMessage sendChatTextMsg:@"hello IM" SenderUid:0 ReceiverUid:0 ChatType:Header_ChatMsgType_Single];
+ 
+    ChatVO *chatvo = [ChatVO shareInstance];
+    
+    [chatvo deleteAllObjects];
+    
+    for (int i = 0; i < 1; i++) {
+        RealmChatModel *model = [[RealmChatModel alloc]init];
+        model.read_status = i;
+        model.message_content = @"hello Realm";
+        [chatvo addChatVO:model];
+    }
+    [chatvo allObjects];
     
 }
 -(ReceiveMessage *)recMessage{
