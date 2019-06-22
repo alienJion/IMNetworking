@@ -21,8 +21,8 @@
     return _instance;
 }
 
-
--(void)addChatVO:(RealmChatModel *)model{
+#pragma mark    增
+-(void)addChatVO:(ChatModel *)model{
     [self.realm beginWriteTransaction];
     [self.realm addObject:model];//对Realm数据库进行读写操作，在Realm上开始写入事务, 每个Realm文件一次只能打开一个写事务
     NSError *error = nil;
@@ -32,25 +32,54 @@
         NSLog(@"保存失败请清理内存");
     }
 }
--(NSArray <RealmChatModel *> *)allObjects{
-    RLMResults <RealmChatModel*> *result = [RealmChatModel allObjects];
-    
-    return [self changeRLMResults:result];
+
+#pragma mark    删
+-(void)deleteObjectWithSessionId:(NSString *)sessionId{
+    NSArray *chatModelArray = [self objectsWhereSessionId:sessionId];
+    for (ChatModel *model in chatModelArray) {
+        [self.realm transactionWithBlock:^{
+            [self.realm deleteObject:model];
+        }];
+    }
 }
-
--(NSArray <RealmChatModel *> *)objectsWhereSessionId:(NSString *)sessionId{
-    
-    RLMResults <RealmChatModel *> *result = [RealmChatModel objectsWhere:[NSString stringWithFormat:@"session_id = '%@'",sessionId]];
-    return [self changeRLMResults:result];
-}
-
-
 -(void)deleteAllObjects{
     [self.realm transactionWithBlock:^{
         [self.realm deleteAllObjects];
-
+        
     }];
 }
+
+#pragma mark    改
+-(void)updateObjectsWhereMessageId:(NSString *)messageid  withChatModel:(ChatModel *)model{
+    //这里面修改的模型,一定是被realm所管理的模型
+    NSString *where = [NSString stringWithFormat:@"message_id = '%@'",messageid];
+    RLMResults <ChatModel *> *result = [ChatModel objectsWhere:where];
+    NSArray *modelArray = [self changeRLMResults:result];
+    for (ChatModel *chatModel in modelArray) {
+        [self.realm transactionWithBlock:^{
+             chatModel.status = model.status;
+            chatModel.read_status = model.read_status;
+        }];
+    }
+    
+}
+
+
+#pragma mark    查
+-(NSArray <ChatModel *> *)allObjects{
+    RLMResults <ChatModel*> *result = [ChatModel allObjects];
+    
+    return [self changeRLMResults:result];
+}
+
+-(NSArray <ChatModel *> *)objectsWhereSessionId:(NSString *)sessionId{
+    NSString *where = [NSString stringWithFormat:@"session_id = '%@'",sessionId];
+    RLMResults <ChatModel *> *result = [ChatModel objectsWhere:where];
+    return [self changeRLMResults:result];
+}
+
+
+
 
 
 
@@ -62,7 +91,7 @@
 }
 -(NSArray *)changeRLMResults:(RLMResults *)result{
     NSMutableArray *modelArray = [NSMutableArray arrayWithCapacity:0];
-    for (RealmChatModel *model in result) {
+    for (ChatModel *model in result) {
         [modelArray addObject:model];
     }
     return modelArray.copy;

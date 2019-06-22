@@ -1,13 +1,14 @@
 //
-//  RealmChatModel.h
+//  ChatModel.h
 //  IMNetworking
 //
 //  Created by 杨炯 on 2019/6/22.
 //Copyright © 2019 ouwen. All rights reserved.
 //
+
 #import <Realm/Realm.h>
 
-@interface RealmChatModel : RLMObject
+@interface ChatModel : RLMObject
 /**
  聊天记录唯一标识
  */
@@ -60,10 +61,8 @@
  会话id
  */
 @property NSString *session_id;
-
-
 @end
 
 // This protocol enables typed collections. i.e.:
-// RLMArray<RealmChatModel *><RealmChatModel>
-RLM_ARRAY_TYPE(RealmChatModel)
+// RLMArray<ChatModel *><ChatModel>
+RLM_ARRAY_TYPE(ChatModel)
