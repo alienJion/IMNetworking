@@ -4,9 +4,25 @@
 target 'IMNetworking' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  pod 'ReactiveObjC', '~> 3.1.0'
-  pod 'CocoaAsyncSocket'#长链接
-  pod 'Protobuf'#数据序列化
-  pod 'Realm'
+  #IM需要类库
+  pod 'ReactiveObjC','~> 3.1.0'
+  pod 'CocoaAsyncSocket','~> 7.6.3'#长链接
+  pod 'Protobuf','~> 3.8.0'#数据序列化
+  pod 'Realm','~> 3.16.2'#数据库
+  #UI
+  pod 'IQKeyboardManager', '~> 5.0.7'#键盘
+  pod 'AFNetworking',  '~> 3.2.1'#网络请求
+  pod 'FDFullscreenPopGesture' #禁用和开启系统导航栏、全屏侧滑返回手势
+  pod 'MBProgressHUD'
+  pod 'Toast'
+  pod 'Masonry'
+  pod 'MJRefresh'
+  pod 'TZImagePickerController', '~> 3.0.8'
+#  pod 'SDCycleScrollView'   # 轮播图
+  pod 'SVProgressHUD' #消息提示
+  pod 'DZNEmptyDataSet', '~> 1.8.1'
+  pod 'YYModel'
+  pod 'YYCache'
+  pod 'YYWebImage'
+  pod 'BRPickerView' #通用选择器
 end
