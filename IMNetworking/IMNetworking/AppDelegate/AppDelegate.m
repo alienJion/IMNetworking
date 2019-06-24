@@ -10,7 +10,7 @@
 #import "MainTabBarConfig.h"
 #import "ConfigIQKeyboard.h"
 #import "ConfigGlobalStyle.h"
-
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,7 +22,8 @@
     // Override point for customization after application launch.
     [ConfigIQKeyboard configIQKeyboard];
     [ConfigGlobalStyle configGlobalStyle];
-    [self mainTabBarRootVC];
+//    [self mainTabBarRootVC];
+    [self loginRootVC];
     return YES;
 }
 //登录成功根视图
@@ -30,7 +31,11 @@
     MainTabBarController *mainTabBar = [MainTabBarConfig setMainTabBarController];
     self.window.rootViewController = mainTabBar;
 }
-
+-(void)loginRootVC{
+    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:[LoginViewController new]];
+    
+    self.window.rootViewController = navigationVC;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

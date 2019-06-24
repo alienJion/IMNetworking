@@ -63,17 +63,17 @@
         NSLog(@"录音地址%@",filePath);
         NSData *fileData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMapped error:nil];
         NSLog(@"fileData%@",fileData);
-        [ServiceApi uploadForVoice:filePath accData:fileData success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"reponseObject===%@",responseObject);
-                        if([responseObject[@"ret"] intValue]==200 ){
-                            NSString *url=responseObject[@"remoteFileName"];
-                            //的到url之后回传个JSSDK 然后调H5方法
-                        }else{
-                            [YWindow XJShowToast:responseObject[@"msg"]];
-                        }
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            [YWindow XJShowToast:@"上传失败"];
-        }];
+//        [ServiceApi uploadForVoice:filePath accData:fileData success:^(NSURLSessionDataTask *task, id responseObject) {
+//            NSLog(@"reponseObject===%@",responseObject);
+//                        if([responseObject[@"ret"] intValue]==200 ){
+//                            NSString *url=responseObject[@"remoteFileName"];
+//                            //的到url之后回传个JSSDK 然后调H5方法
+//                        }else{
+//                            [YWindow XJShowToast:responseObject[@"msg"]];
+//                        }
+//        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//            [YWindow XJShowToast:@"上传失败"];
+//        }];
         
     }
     

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
-    self.view.backgroundColor = bgColor;
+    self.view.backgroundColor = XJBgColor;
     [self customNavViewLeftBarButtonItem:^(UIButton * _Nonnull itemButton) {
         [itemButton setImage:[UIImage imageNamed:@"bar_back"] forState:UIControlStateNormal];
     }];
@@ -47,7 +47,7 @@
         if (self.navigationBGColor) {
             _navBarView.backgroundColor = self.navigationBGColor;
         }else{
-            _navBarView.backgroundColor = mainColor;
+            _navBarView.backgroundColor = XJMainColor;
         }
         [_navBarView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.offset(0);
@@ -58,7 +58,7 @@
 }
 -(void)showNavViewButtomLien{
     UIView *lienView = [[UIView alloc]init];
-    lienView.backgroundColor = bgColor;
+    lienView.backgroundColor = XJBgColor;
     [self.navBarView addSubview:lienView];
     [lienView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.left.right.offset(0);
@@ -161,7 +161,7 @@
 #pragma mark-----------Func----------------
 -(UIButton *)itemButton{
     _itemButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_itemButton setTitleColor:YWhiteColor forState:UIControlStateNormal];
+    [_itemButton setTitleColor:XJWhiteColor forState:UIControlStateNormal];
     _itemButton.titleLabel.font = YFontSize18;
     return _itemButton;
 }

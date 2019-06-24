@@ -14,6 +14,7 @@
 
 #define UmengAppkey @"5a0d6a34b27b0a4fd0000092"
 
+#define UserToken [[CacheUserInfo shareInstance] getCacheToken]
 
 
 // app的单例对象

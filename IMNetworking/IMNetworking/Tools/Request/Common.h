@@ -57,11 +57,11 @@
 #define MAIN_COLOR RGBCOLOR(0x20, 0x43, 0x8d)
 #define PRICE_COLOR RGBCOLOR(0xd8, 0x1e, 0x06)
 #define BG_COLOR RGBCOLOR(0xf5, 0xf5, 0xf5)
-#define APP_NAME_DEFAULT @"及时雨"
+#define APP_NAME_DEFAULT @"IM"
 #define zongji @"10000"
 #define umeng_channel @"qikecn"
 //copyright launchScreen也需要修改，不在此处
-#define copyright @"COPYRIGHT © 2018 及时雨 ALL RIGHTS RESERVED"
+#define copyright @"COPYRIGHT © 2019 IM ALL RIGHTS RESERVED"
 
 //程序配置结束
 

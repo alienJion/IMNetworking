@@ -28,14 +28,14 @@
                           @"设置",
                           ];
     NSArray *tabBarDefaultImages = @[
-                                     @"tab_home_normal",
-                                     @"tab_classify_normal",
-                                     @"tab_mine_normal",
+                                     @"msg_n",
+                                     @"book_n",
+                                     @"seting_n",
                                      ];
     NSArray *tabbarSelectedImages = @[
-                                      @"tab_home_selected",
-                                      @"tab_classify_selected",
-                                      @"tab_mine_selected",
+                                      @"msg_y",
+                                      @"book_y",
+                                      @"seting_y",
                                       ];
     [mainTabbarVC setViewControllers:VCS viewControllerTitleS:VCTitles defaultImages:tabBarDefaultImages selectedImages:tabbarSelectedImages];
     mainTabbarVC.selectedIndex = 0;

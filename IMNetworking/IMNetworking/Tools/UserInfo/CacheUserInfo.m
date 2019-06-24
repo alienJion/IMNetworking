@@ -9,6 +9,7 @@
 #import "CacheUserInfo.h"
 
 #define UserKey @"userInfo"
+#define tokenKey @"token"
 @interface CacheUserInfo()
 @property(nonatomic,strong)YYCache *userCache;
 
@@ -53,14 +54,33 @@
     UserModel *model = [UserModel yy_modelWithJSON:modelStr];
     return model;
 }
--(void)clearUserInfo{
-    [self.userCache removeObjectForKey:UserKey];
+
+
+/**
+ 保存token
+ */
+-(void)setCacheToken:(NSString *)token{
+    [[self userCache] setObject:token forKey:tokenKey];
+
+}
+/**
+ 获取token
+ */
+-(NSString *)getCacheToken{
+    NSString *token = (NSString *)[[self userCache] objectForKey:tokenKey];
+    return token;
 }
 
 
+-(void)clearUserInfo{
+    [self.userCache removeObjectForKey:UserKey];
+    [self.userCache removeObjectForKey:tokenKey];
+
+}
+
 -(YYCache *)userCache{
     if (_userCache == nil) {
-        _userCache = [YYCache cacheWithName:UserKey];
+        _userCache = [YYCache cacheWithName:@"IM.userInfo"];
     }
     return _userCache;
 }

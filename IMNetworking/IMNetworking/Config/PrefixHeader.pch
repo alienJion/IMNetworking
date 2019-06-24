@@ -29,11 +29,11 @@
 #import "UIView+XJToast.h"
 #import "URLHeader.h"
 #import "Common.h"
-#import "BPush.h"
+#import "CommonDefineConfig.h"
 
+#import "Utilitles.h"
 #import "ServiceApi.h"
 #import "CacheUserInfo.h"
-#import "BaiduPushUtil.h"
 #import "NSString+Utilitles.h"
 
 #endif /* PrefixHeader_pch */

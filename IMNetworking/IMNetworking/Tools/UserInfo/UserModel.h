@@ -14,34 +14,43 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  用户id
  */
-@property(nonatomic,strong)NSString *userId;
+@property(nonatomic,strong)NSString *appKey;
 /**
- 用户id
+ 公司
  */
-@property(nonatomic,strong)NSString *key;
+@property(nonatomic,strong)NSString *company;
 /**
- 用户类型 0:普通用户 1:快递员用户
+ 部门
  */
-@property(nonatomic,strong)NSString *type;
+@property(nonatomic,strong)NSString *depName;
 /**
- 用户名称
+ 头像缩略图
  */
-@property(nonatomic,strong)NSString *username;
+@property(nonatomic,strong)NSString *imgThumbnailUrl;
 /**
- 用户id
+ 头像
+ */
+@property(nonatomic,strong)NSString *imgUrl;
+/**
+ 工号
+ */
+@property(nonatomic,strong)NSString *jobNo;
+/**
+ 昵称
+ */
+@property(nonatomic,strong)NSString *nickName;
+/**
+ 手机号
  */
 @property(nonatomic,strong)NSString *phone;
 /**
- 用户头像
+ 用户id
  */
-@property(nonatomic,strong)NSString *headimg;
-
-@property(nonatomic,strong)NSString *sex;
-
-@property(nonatomic,strong)NSString *age;
-
-@property(nonatomic,strong)NSString *money;//余额
-
+@property(nonatomic,strong)NSString *userId;
+/**
+ 用户名称
+ */
+@property(nonatomic,strong)NSString *userName;
 
 @end
 

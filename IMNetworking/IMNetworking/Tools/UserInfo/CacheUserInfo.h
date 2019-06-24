@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 //全局访问点
 + (CacheUserInfo *)shareInstance;
 
-
-
 /**
  保存用户信息
  
@@ -31,6 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 -(UserModel *)getCacheUserinfo;
 
 
+/**
+ 保存token
+ */
+-(void)setCacheToken:(NSString *)token;
+/**
+ 获取token
+ */
+-(NSString *)getCacheToken;
 
 /**
  清除用户信息

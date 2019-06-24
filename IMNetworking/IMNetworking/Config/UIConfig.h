@@ -52,25 +52,28 @@
 // 无色
 #define YClearColor [UIColor clearColor]
 // 白色
-#define YWhiteColor UIColorFromRGB(0Xffffff)
+#define XJWhiteColor UIColorFromRGB(0Xffffff)
 
 // 主题蓝色
-#define mainColor UIColorFromRGB(0X4271C1)
+#define XJMainColor UIColorFromRGB(0X4271C1)
 
-// titleColor
-#define titleColor UIColorFromRGB(0X515151)
+//占位字体颜色
+#define XJPlaceholderColor UIColorFromRGB(0XB5B5B5)
+
+//灰色字体颜色
+#define XJGrayColor UIColorFromRGB(0X787878)
+
+
+// tabbarTitleColor
+#define XJTabbarTitleColor UIColorFromRGB(0X272727)
 
 // 背景
-#define bgColor UIColorFromRGB(0Xf5f5f5)
-
-// 价格显示色调
-#define color_price UIColorFromRGB(0Xd81e06)
+#define XJBgColor UIColorFromRGB(0Xf5f5f5)
 
 // toolbar 标题颜色
-#define toolbarTitleColor UIColorFromRGB(0Xffffff)
+#define XJToolbarTitleColor UIColorFromRGB(0Xffffff)
 
-// toolbar 标题颜色
-#define bg_blue_Color UIColorFromRGB(0X1987F6)
+
 
 
 

@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		05C62D694901E75758854418 /* Pods_IMNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEFDFC7F9D8FE673D63886D /* Pods_IMNetworking.framework */; };
+		42446D2522C0B4F900A6591C /* Utilitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 42446D2422C0B4F900A6591C /* Utilitles.m */; };
+		42446D2B22C0C7FC00A6591C /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42446D2A22C0C7FC00A6591C /* LoginModel.m */; };
+		42446D2F22C0D95700A6591C /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42446D2D22C0D95700A6591C /* RegisteredViewController.m */; };
+		42446D3022C0D95700A6591C /* RegisteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42446D2E22C0D95700A6591C /* RegisteredViewController.xib */; };
 		425B32B922C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B325122C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.m */; };
-		425B32BA22C06BC900644CB9 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425B325622C06BC900644CB9 /* libBPush.a */; };
-		425B32BB22C06BC900644CB9 /* BaiduPushUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B325722C06BC900644CB9 /* BaiduPushUtil.m */; };
-		425B32BC22C06BC900644CB9 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 425B325822C06BC900644CB9 /* test.caf */; };
 		425B32BD22C06BC900644CB9 /* NSString+Utilitles.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B325922C06BC900644CB9 /* NSString+Utilitles.m */; };
 		425B32BE22C06BC900644CB9 /* UIView+XJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B325C22C06BC900644CB9 /* UIView+XJToast.m */; };
 		425B32BF22C06BC900644CB9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B325F22C06BC900644CB9 /* BaseViewController.m */; };
@@ -48,8 +49,13 @@
 		425B32EA22C06D9C00644CB9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B32E922C06D9C00644CB9 /* HomeViewController.m */; };
 		425B32ED22C06DB500644CB9 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B32EC22C06DB500644CB9 /* AddressBookViewController.m */; };
 		425B32F022C06DC500644CB9 /* PersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B32EF22C06DC500644CB9 /* PersionViewController.m */; };
+		425B330022C07C4200644CB9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B32FE22C07C4200644CB9 /* LoginViewController.m */; };
+		425B330122C07C4200644CB9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425B32FF22C07C4200644CB9 /* LoginViewController.xib */; };
 		4263798922BE840A00FC2FFE /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4263798822BE840A00FC2FFE /* ChatModel.m */; };
 		42AC7B5622BE1913008C2393 /* ChatVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AC7B5522BE1913008C2393 /* ChatVO.m */; };
+		42B6E0D422C10C5A00F387AA /* RegisteViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B6E0D322C10C5A00F387AA /* RegisteViewModel.m */; };
+		42CE56A022C0ACB800075E98 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CE569F22C0ACB800075E98 /* LoginViewModel.m */; };
+		42CE56A622C0B21500075E98 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CE56A422C0B21500075E98 /* RequestManager.m */; };
 		93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93134A5422B2AC9500868E39 /* AppDelegate.m */; };
 		93134A5B22B2AC9500868E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5922B2AC9500868E39 /* Main.storyboard */; };
 		93134A5D22B2AC9500868E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93134A5C22B2AC9500868E39 /* Assets.xcassets */; };
@@ -79,13 +85,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42446D2322C0B4F900A6591C /* Utilitles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilitles.h; sourceTree = "<group>"; };
+		42446D2422C0B4F900A6591C /* Utilitles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilitles.m; sourceTree = "<group>"; };
+		42446D2922C0C7FC00A6591C /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		42446D2A22C0C7FC00A6591C /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		42446D2C22C0D95700A6591C /* RegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		42446D2D22C0D95700A6591C /* RegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		42446D2E22C0D95700A6591C /* RegisteredViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisteredViewController.xib; sourceTree = "<group>"; };
 		425B325122C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+DPHProgressHUD.m"; sourceTree = "<group>"; };
 		425B325222C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+DPHProgressHUD.h"; sourceTree = "<group>"; };
-		425B325422C06BC900644CB9 /* BaiduPushUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduPushUtil.h; sourceTree = "<group>"; };
-		425B325522C06BC900644CB9 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
-		425B325622C06BC900644CB9 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
-		425B325722C06BC900644CB9 /* BaiduPushUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduPushUtil.m; sourceTree = "<group>"; };
-		425B325822C06BC900644CB9 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		425B325922C06BC900644CB9 /* NSString+Utilitles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilitles.m"; sourceTree = "<group>"; };
 		425B325B22C06BC900644CB9 /* UIView+XJToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJToast.h"; sourceTree = "<group>"; };
 		425B325C22C06BC900644CB9 /* UIView+XJToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XJToast.m"; sourceTree = "<group>"; };
@@ -148,7 +156,6 @@
 		425B32B222C06BC900644CB9 /* ConfigIQKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigIQKeyboard.m; sourceTree = "<group>"; };
 		425B32B322C06BC900644CB9 /* MainTabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarConfig.m; sourceTree = "<group>"; };
 		425B32B422C06BC900644CB9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		425B32B522C06BC900644CB9 /* WebUserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUserConfig.h; sourceTree = "<group>"; };
 		425B32B622C06BC900644CB9 /* ConfigIQKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigIQKeyboard.h; sourceTree = "<group>"; };
 		425B32B722C06BC900644CB9 /* ConfigGlobalStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigGlobalStyle.h; sourceTree = "<group>"; };
 		425B32E222C06CDF00644CB9 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
@@ -159,11 +166,20 @@
 		425B32EC22C06DB500644CB9 /* AddressBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		425B32EE22C06DC500644CB9 /* PersionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersionViewController.h; sourceTree = "<group>"; };
 		425B32EF22C06DC500644CB9 /* PersionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersionViewController.m; sourceTree = "<group>"; };
+		425B32FD22C07C4200644CB9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		425B32FE22C07C4200644CB9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		425B32FF22C07C4200644CB9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4263798722BE840A00FC2FFE /* ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatModel.h; sourceTree = "<group>"; };
 		4263798822BE840A00FC2FFE /* ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
 		42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.release.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		42AC7B5422BE1913008C2393 /* ChatVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVO.h; sourceTree = "<group>"; };
 		42AC7B5522BE1913008C2393 /* ChatVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVO.m; sourceTree = "<group>"; };
+		42B6E0D222C10C5A00F387AA /* RegisteViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteViewModel.h; sourceTree = "<group>"; };
+		42B6E0D322C10C5A00F387AA /* RegisteViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteViewModel.m; sourceTree = "<group>"; };
+		42CE569E22C0ACB800075E98 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		42CE569F22C0ACB800075E98 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		42CE56A422C0B21500075E98 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		42CE56A522C0B21500075E98 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		93134A5022B2AC9500868E39 /* IMNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93134A5322B2AC9500868E39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93134A5422B2AC9500868E39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -230,7 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425B32BA22C06BC900644CB9 /* libBPush.a in Frameworks */,
 				05C62D694901E75758854418 /* Pods_IMNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +261,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42446D2222C0B4DD00A6591C /* Utilitles */ = {
+			isa = PBXGroup;
+			children = (
+				425B32AC22C06BC900644CB9 /* NSString+Utilitles.h */,
+				425B325922C06BC900644CB9 /* NSString+Utilitles.m */,
+				42446D2322C0B4F900A6591C /* Utilitles.h */,
+				42446D2422C0B4F900A6591C /* Utilitles.m */,
+			);
+			path = Utilitles;
+			sourceTree = "<group>";
+		};
 		425B324A22C06B7700644CB9 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,18 +285,16 @@
 		425B324F22C06BC900644CB9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				42446D2222C0B4DD00A6591C /* Utilitles */,
+				425B329822C06BC900644CB9 /* Request */,
 				93134A6922B2AD9300868E39 /* IMSDK */,
 				425B326B22C06BC900644CB9 /* AudioRecord */,
-				425B325322C06BC900644CB9 /* BaiduPushUtil */,
 				425B325D22C06BC900644CB9 /* BaseViewController */,
 				425B326822C06BC900644CB9 /* CurrentViewController */,
-				425B328622C06BC900644CB9 /* DPHImageSelected */,
-				425B325022C06BC900644CB9 /* DPHProgressHUD */,
+				425B328622C06BC900644CB9 /* ImageSelected */,
+				425B325022C06BC900644CB9 /* ProgressHUD */,
 				425B328B22C06BC900644CB9 /* GuideViewController */,
 				425B32A922C06BC900644CB9 /* MLCompatibleAlert */,
-				425B32AC22C06BC900644CB9 /* NSString+Utilitles.h */,
-				425B325922C06BC900644CB9 /* NSString+Utilitles.m */,
-				425B329822C06BC900644CB9 /* Request */,
 				425B329322C06BC900644CB9 /* UserInfo */,
 				425B329D22C06BC900644CB9 /* XHPayKit */,
 				425B325A22C06BC900644CB9 /* XJToast */,
@@ -278,25 +302,13 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		425B325022C06BC900644CB9 /* DPHProgressHUD */ = {
+		425B325022C06BC900644CB9 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				425B325122C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.m */,
 				425B325222C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.h */,
+				425B325122C06BC900644CB9 /* SVProgressHUD+DPHProgressHUD.m */,
 			);
-			path = DPHProgressHUD;
-			sourceTree = "<group>";
-		};
-		425B325322C06BC900644CB9 /* BaiduPushUtil */ = {
-			isa = PBXGroup;
-			children = (
-				425B325422C06BC900644CB9 /* BaiduPushUtil.h */,
-				425B325522C06BC900644CB9 /* BPush.h */,
-				425B325622C06BC900644CB9 /* libBPush.a */,
-				425B325722C06BC900644CB9 /* BaiduPushUtil.m */,
-				425B325822C06BC900644CB9 /* test.caf */,
-			);
-			path = BaiduPushUtil;
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		425B325A22C06BC900644CB9 /* XJToast */ = {
@@ -344,19 +356,19 @@
 		425B326B22C06BC900644CB9 /* AudioRecord */ = {
 			isa = PBXGroup;
 			children = (
-				425B326C22C06BC900644CB9 /* PlayRecord.h */,
-				425B326D22C06BC900644CB9 /* RecordViewController.m */,
 				425B326E22C06BC900644CB9 /* AudioRecord.h */,
+				425B327222C06BC900644CB9 /* AudioRecord.m */,
+				425B326C22C06BC900644CB9 /* PlayRecord.h */,
 				425B326F22C06BC900644CB9 /* PlayRecord.m */,
+				425B327322C06BC900644CB9 /* RecordViewController.h */,
+				425B326D22C06BC900644CB9 /* RecordViewController.m */,
 				425B327022C06BC900644CB9 /* RecordViewController.xib */,
 				425B327122C06BC900644CB9 /* sample.aac */,
-				425B327222C06BC900644CB9 /* AudioRecord.m */,
-				425B327322C06BC900644CB9 /* RecordViewController.h */,
 			);
 			path = AudioRecord;
 			sourceTree = "<group>";
 		};
-		425B328622C06BC900644CB9 /* DPHImageSelected */ = {
+		425B328622C06BC900644CB9 /* ImageSelected */ = {
 			isa = PBXGroup;
 			children = (
 				425B328922C06BC900644CB9 /* DPHSelectImageVC.h */,
@@ -364,7 +376,7 @@
 				425B328822C06BC900644CB9 /* UIImage+FixOrientation.h */,
 				425B328A22C06BC900644CB9 /* UIImage+FixOrientation.m */,
 			);
-			path = DPHImageSelected;
+			path = ImageSelected;
 			sourceTree = "<group>";
 		};
 		425B328B22C06BC900644CB9 /* GuideViewController */ = {
@@ -386,6 +398,8 @@
 			children = (
 				425B329622C06BC900644CB9 /* CacheUserInfo.h */,
 				425B329422C06BC900644CB9 /* CacheUserInfo.m */,
+				42446D2922C0C7FC00A6591C /* LoginModel.h */,
+				42446D2A22C0C7FC00A6591C /* LoginModel.m */,
 				425B329722C06BC900644CB9 /* UserModel.h */,
 				425B329522C06BC900644CB9 /* UserModel.m */,
 			);
@@ -396,9 +410,11 @@
 			isa = PBXGroup;
 			children = (
 				425B329B22C06BC900644CB9 /* Common.h */,
+				425B329A22C06BC900644CB9 /* URLHeader.h */,
 				425B329922C06BC900644CB9 /* ServiceApi.h */,
 				425B329C22C06BC900644CB9 /* ServiceApi.m */,
-				425B329A22C06BC900644CB9 /* URLHeader.h */,
+				42CE56A522C0B21500075E98 /* RequestManager.h */,
+				42CE56A422C0B21500075E98 /* RequestManager.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -434,15 +450,14 @@
 			isa = PBXGroup;
 			children = (
 				425B32AE22C06BC900644CB9 /* CommonDefineConfig.h */,
-				425B32AF22C06BC900644CB9 /* UIConfig.h */,
-				425B32B022C06BC900644CB9 /* MainTabBarConfig.h */,
+				425B32B722C06BC900644CB9 /* ConfigGlobalStyle.h */,
 				425B32B122C06BC900644CB9 /* ConfigGlobalStyle.m */,
+				425B32B622C06BC900644CB9 /* ConfigIQKeyboard.h */,
 				425B32B222C06BC900644CB9 /* ConfigIQKeyboard.m */,
+				425B32B022C06BC900644CB9 /* MainTabBarConfig.h */,
 				425B32B322C06BC900644CB9 /* MainTabBarConfig.m */,
 				425B32B422C06BC900644CB9 /* PrefixHeader.pch */,
-				425B32B522C06BC900644CB9 /* WebUserConfig.h */,
-				425B32B622C06BC900644CB9 /* ConfigIQKeyboard.h */,
-				425B32B722C06BC900644CB9 /* ConfigGlobalStyle.h */,
+				425B32AF22C06BC900644CB9 /* UIConfig.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -450,8 +465,8 @@
 		425B32E122C06CDF00644CB9 /* MainTabbar */ = {
 			isa = PBXGroup;
 			children = (
-				425B32E222C06CDF00644CB9 /* MainTabBarController.m */,
 				425B32E322C06CDF00644CB9 /* MainTabBarController.h */,
+				425B32E222C06CDF00644CB9 /* MainTabBarController.m */,
 			);
 			path = MainTabbar;
 			sourceTree = "<group>";
@@ -558,6 +573,10 @@
 		425B32FA22C0703F00644CB9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				42CE569E22C0ACB800075E98 /* LoginViewModel.h */,
+				42CE569F22C0ACB800075E98 /* LoginViewModel.m */,
+				42B6E0D222C10C5A00F387AA /* RegisteViewModel.h */,
+				42B6E0D322C10C5A00F387AA /* RegisteViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -593,6 +612,12 @@
 				425B32FB22C0703F00644CB9 /* View */,
 				425B32FA22C0703F00644CB9 /* ViewModel */,
 				425B32FC22C0703F00644CB9 /* Model */,
+				425B32FD22C07C4200644CB9 /* LoginViewController.h */,
+				425B32FE22C07C4200644CB9 /* LoginViewController.m */,
+				425B32FF22C07C4200644CB9 /* LoginViewController.xib */,
+				42446D2C22C0D95700A6591C /* RegisteredViewController.h */,
+				42446D2D22C0D95700A6591C /* RegisteredViewController.m */,
+				42446D2E22C0D95700A6591C /* RegisteredViewController.xib */,
 			);
 			path = ID;
 			sourceTree = "<group>";
@@ -847,12 +872,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425B32BC22C06BC900644CB9 /* test.caf in Resources */,
+				425B330122C07C4200644CB9 /* LoginViewController.xib in Resources */,
 				425B32D122C06BC900644CB9 /* GuideCollectionViewCell.xib in Resources */,
 				93134A6022B2AC9500868E39 /* LaunchScreen.storyboard in Resources */,
 				93134A5D22B2AC9500868E39 /* Assets.xcassets in Resources */,
 				425B32C822C06BC900644CB9 /* sample.aac in Resources */,
 				93134A5B22B2AC9500868E39 /* Main.storyboard in Resources */,
+				42446D3022C0D95700A6591C /* RegisteredViewController.xib in Resources */,
 				425B32D922C06BC900644CB9 /* README.md in Resources */,
 				425B32C322C06BC900644CB9 /* ShopClassCollectionViewCell.xib in Resources */,
 				425B32C722C06BC900644CB9 /* RecordViewController.xib in Resources */,
@@ -910,14 +936,17 @@
 			files = (
 				93134AB322B2AD9300868E39 /* MsgShakepbobjc.m in Sources */,
 				425B32BF22C06BC900644CB9 /* BaseViewController.m in Sources */,
+				42446D2F22C0D95700A6591C /* RegisteredViewController.m in Sources */,
 				425B32E422C06CE000644CB9 /* MainTabBarController.m in Sources */,
 				425B32ED22C06DB500644CB9 /* AddressBookViewController.m in Sources */,
 				938A5D0B22B5539900C010C4 /* TimeUtilities.m in Sources */,
 				425B32D322C06BC900644CB9 /* ELCVFlowLayout.m in Sources */,
 				93134AAC22B2AD9300868E39 /* MsgHeartbeatpbobjc.m in Sources */,
 				42AC7B5622BE1913008C2393 /* ChatVO.m in Sources */,
+				42CE56A022C0ACB800075E98 /* LoginViewModel.m in Sources */,
 				425B32E022C06BC900644CB9 /* MainTabBarConfig.m in Sources */,
 				425B32CE22C06BC900644CB9 /* DPHSelectImageVC.m in Sources */,
+				42B6E0D422C10C5A00F387AA /* RegisteViewModel.m in Sources */,
 				93134AAB22B2AD9300868E39 /* MsgLoginpbobjc.m in Sources */,
 				93BF0B0822B3871600B2E6F2 /* MessageModel.m in Sources */,
 				93BF0B1122B39FD500B2E6F2 /* BuilderMessage.m in Sources */,
@@ -925,7 +954,9 @@
 				425B32DC22C06BC900644CB9 /* NSString+XHPayKit.m in Sources */,
 				93CAB0DB22B3ACB200289E7E /* MessageProtoBuf.m in Sources */,
 				93DAD54F22B55B54006FBBE3 /* LinkService.m in Sources */,
+				425B330022C07C4200644CB9 /* LoginViewController.m in Sources */,
 				93134A6322B2AC9500868E39 /* main.m in Sources */,
+				42446D2B22C0C7FC00A6591C /* LoginModel.m in Sources */,
 				425B32DA22C06BC900644CB9 /* NSDictionary+XHPayKit.m in Sources */,
 				93134AA822B2AD9300868E39 /* MsgTypepbobjc.m in Sources */,
 				425B32DB22C06BC900644CB9 /* XHPayKitConst.m in Sources */,
@@ -946,6 +977,7 @@
 				425B32BD22C06BC900644CB9 /* NSString+Utilitles.m in Sources */,
 				93134A9C22B2AD9300868E39 /* SocketManager.m in Sources */,
 				425B32BE22C06BC900644CB9 /* UIView+XJToast.m in Sources */,
+				42446D2522C0B4F900A6591C /* Utilitles.m in Sources */,
 				93134AAD22B2AD9300868E39 /* MsgTypingpbobjc.m in Sources */,
 				425B32D622C06BC900644CB9 /* ServiceApi.m in Sources */,
 				425B32C422C06BC900644CB9 /* CurrentController.m in Sources */,
@@ -953,7 +985,6 @@
 				425B32D022C06BC900644CB9 /* GuideCollectionViewCell.m in Sources */,
 				93134A5522B2AC9500868E39 /* AppDelegate.m in Sources */,
 				425B32D522C06BC900644CB9 /* UserModel.m in Sources */,
-				425B32BB22C06BC900644CB9 /* BaiduPushUtil.m in Sources */,
 				425B32DD22C06BC900644CB9 /* MLCompatibleAlert.m in Sources */,
 				425B32F022C06DC500644CB9 /* PersionViewController.m in Sources */,
 				425B32DE22C06BC900644CB9 /* ConfigGlobalStyle.m in Sources */,
@@ -961,6 +992,7 @@
 				93DAD55922B5FEE9006FBBE3 /* ReceiveMessage.m in Sources */,
 				93DAD55222B55D0E006FBBE3 /* PacketService.m in Sources */,
 				93134AA022B2AD9300868E39 /* MsgStatuscodepbobjc.m in Sources */,
+				42CE56A622C0B21500075E98 /* RequestManager.m in Sources */,
 				4263798922BE840A00FC2FFE /* ChatModel.m in Sources */,
 				93DAD55622B5DE92006FBBE3 /* AnalysisMessage.m in Sources */,
 				425B32CF22C06BC900644CB9 /* UIImage+FixOrientation.m in Sources */,

@@ -9,10 +9,10 @@
 #import "UserModel.h"
 
 @implementation UserModel
-+(NSDictionary *)modelCustomPropertyMapper{
-    return @{
-             @"userId":@"id",
-             @"type":@[@"type",@"state"],
-             };
-}
+//+(NSDictionary *)modelCustomPropertyMapper{
+//    return @{
+//             @"userId":@"id",
+//             @"type":@[@"type",@"state"],
+//             };
+//}
 @end

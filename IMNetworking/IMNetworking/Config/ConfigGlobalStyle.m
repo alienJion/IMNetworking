@@ -20,21 +20,21 @@
     [UINavigationBar appearance].translucent = NO;
     
     if([UIDevice currentDevice].systemVersion.floatValue >= 9.0f){
-        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:mainColor,NSFontAttributeName:[UIFont fontWithName:@"PingFang SC" size:18]}];
+        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:XJMainColor,NSFontAttributeName:[UIFont fontWithName:@"PingFang SC" size:18]}];
     }
 
-    [[UINavigationBar appearance]setTintColor:mainColor];
+    [[UINavigationBar appearance]setTintColor:XJMainColor];
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0) forBarMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.3f]} forState:UIControlStateNormal];
     [UITabBar appearance].translucent  = NO;
     [UITabBar appearance].backgroundColor = [UIColor whiteColor];
     [UITabBar appearance].barTintColor = [UIColor whiteColor];
-    [UITabBar appearance].tintColor = mainColor;
+    [UITabBar appearance].tintColor = XJMainColor;
     if (@available(iOS 10.0, *)) {
-        [UITabBar appearance].unselectedItemTintColor = titleColor;
+        [UITabBar appearance].unselectedItemTintColor = XJTabbarTitleColor;
     } else {
-        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:titleColor} forState:UIControlStateNormal];
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:XJTabbarTitleColor} forState:UIControlStateNormal];
     }
     [UINavigationBar appearance].backIndicatorTransitionMaskImage = [UIImage imageNamed:@"system_back"];
     [UINavigationBar appearance].backIndicatorImage = [UIImage imageNamed:@"system_back"];

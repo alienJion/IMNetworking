@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = YWhiteColor;
+    self.backgroundColor = XJWhiteColor;
     self.iconImageView.userInteractionEnabled = YES;
 }
 @end

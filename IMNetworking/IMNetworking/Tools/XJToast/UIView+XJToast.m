@@ -60,7 +60,7 @@ static int   const ToastTag99991 = 99991;
     //样式二：白色背景，主题色字体
     CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
     style.messageFont = [UIFont systemFontOfSize:15.0f];
-    style.messageColor = mainColor;
+    style.messageColor = XJMainColor;
     style.messageAlignment = NSTextAlignmentCenter;
     style.backgroundColor = [UIColor whiteColor];
     //图片大小
