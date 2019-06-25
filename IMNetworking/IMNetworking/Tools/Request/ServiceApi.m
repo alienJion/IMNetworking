@@ -23,5 +23,30 @@
             failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
     [[RequestManager sharedManager] sendPostRequestParameter:para andURl:LoginURL success:success failure:failure];
 }
+/**
+ 获取验证码
+ */
++(void)getCodeRequest:(NSDictionary *)para
+              success:(void (^)(NSURLSessionDataTask *task, NSDictionary *responseObject))success
+              failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
+    [[RequestManager sharedManager] sendPostRequestParameter:para andURl:GetCodeURL success:success failure:failure];
+}
+/**
+ 注册
+ */
++(void)registerRequest:(NSDictionary *)para
+               success:(void (^)(NSURLSessionDataTask *task, NSDictionary *responseObject))success
+               failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
+    [[RequestManager sharedManager] sendPostRequestParameter:para andURl:RegisterURL success:success failure:failure];
 
+}
+/**
+ 忘记密码和找回密码
+ */
++(void)updatePwdRequest:(NSDictionary *)para
+               success:(void (^)(NSURLSessionDataTask *task, NSDictionary *responseObject))success
+               failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
+    [[RequestManager sharedManager] sendPostRequestParameter:para andURl:UpdatePwdURL success:success failure:failure];
+    
+}
 @end

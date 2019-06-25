@@ -14,6 +14,8 @@
 
 
 #define BaseURL @"http://192.168.10.123:8080/im/"
-#define LoginURL @"user/login"
-
+#define LoginURL @"user/login"//登录
+#define GetCodeURL @"user/getVerificationCode"//获取验证码
+#define RegisterURL @"user/register"//注册
+#define UpdatePwdURL @"user/updatePassword"//修改密码和忘记密码
 #endif /* URLHeader_h */

@@ -11,6 +11,7 @@
 #import "LoginModel.h"
 #import "AppDelegate.h"
 #import "RegisteredViewController.h"
+#import "ForgetPwdViewController.h"//忘记密码
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;//手机号
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;//密码
@@ -55,7 +56,7 @@
     
     
     [[self.forgetPwdButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
-        [YWindow XJShowToast:@"忘记密码"];
+        [self.navigationController pushViewController:[ForgetPwdViewController new] animated:YES];
     }];
     [[self.registeredButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
         [self.navigationController pushViewController:[RegisteredViewController new] animated:YES];

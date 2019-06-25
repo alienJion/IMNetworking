@@ -20,7 +20,6 @@
 
 @property (nonatomic, strong) RACDisposable *disposable;
 
-
 @property (nonatomic,strong)RegisteViewModel *viewModel;
 @end
 
@@ -88,10 +87,10 @@
     [[self.codeButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
         if(self.phoneNumberTextField.text.length != 11){
             [YWindow XJShowToast:@"请核对手机号"];
-            [self countdown];
         }else{
-            [YWindow XJShowToast:@"获取验证码"];
-            [self.viewModel.getCodeSubject sendNext:@""];
+//            [YWindow XJShowToast:@"获取验证码"];
+            NSDictionary *para = @{@"phone" : [NSString nullToString:self.phoneNumberTextField.text]};
+            [self.viewModel.getCodeCommand execute:para];
         }
     }];
     [[self.goLoginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable x) {
@@ -104,18 +103,35 @@
     
     
     RAC(_registButton, enabled) = [RACSignal combineLatest:@[self.phoneNumberTextField.rac_textSignal, self.phoneCodeTextField.rac_textSignal,self.pwdTextField.rac_textSignal] reduce:^id _Nullable(NSString * phoneNumber, NSString *code,NSString * password){
-        if(phoneNumber.length == 11 && code.length == 6 && password.length > 5){
+        if(phoneNumber.length && code.length  && password.length){
             [self.registButton setBackgroundImage:[UIImage imageNamed:@"Login_bule"] forState:UIControlStateNormal];
             [self.registButton setTitleColor:XJWhiteColor forState:UIControlStateNormal];
         }else{
             [self.registButton setBackgroundImage:[UIImage imageNamed:@"Login_gray"] forState:UIControlStateNormal];
             [self.registButton setTitleColor:XJGrayColor forState:UIControlStateNormal];
         }
-        return @(phoneNumber.length == 11 && code.length == 6 && password.length > 5);
+        return @(phoneNumber.length  && code.length  && password.length );
     }];
     [[self.registButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        if (self.pwdTextField.text.length != 11) {
+            [YWindow XJShowToast:@"请核对手机号"];
+            return ;
+        }
+        if (self.phoneCodeTextField.text.length != 6) {
+            [YWindow XJShowToast:@"请输入六位验证码"];
+            return ;
+        }
+        if (self.pwdTextField.text.length < 6 && self.pwdTextField.text.length > 20) {
+            [YWindow XJShowToast:@"请输入6-20位密码"];
+            return ;
+        }
+        NSDictionary *para = @{
+                               @"userName":[NSString nullToString:self.phoneNumberTextField.text],
+                               @"veifyCode":[NSString nullToString:self.phoneCodeTextField.text],
+                               @"password":[NSString nullToString:self.pwdTextField.text],
+                               };
 //        去注册
-        [self.viewModel.registeSubject sendNext:@""];
+        [self.viewModel.registeCommand execute:para];
 
     }];
     

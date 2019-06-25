@@ -1,14 +1,14 @@
 //
-//  RegisteViewModel.m
+//  UpdatePwdViewModel.m
 //  IMNetworking
 //
-//  Created by 杨炯 on 2019/6/24.
+//  Created by 杨炯 on 2019/6/25.
 //  Copyright © 2019 ouwen. All rights reserved.
 //
 
-#import "RegisteViewModel.h"
+#import "UpdatePwdViewModel.h"//修改密码和忘记密码
 
-@implementation RegisteViewModel
+@implementation UpdatePwdViewModel
 - (instancetype)init
 {
     self = [super init];
@@ -17,8 +17,8 @@
             [self.getCodeSubject sendNext:x];
             return ;
         }];
-        [self.registeCommand.executionSignals.switchToLatest subscribeNext:^(NSDictionary*  _Nullable x) {
-            [self.registeSubject sendNext:x];
+        [self.updatePwdCommand.executionSignals.switchToLatest subscribeNext:^(NSDictionary*  _Nullable x) {
+            [self.updatePwdSubject sendNext:x];
             return ;
         }];
     }
@@ -46,9 +46,9 @@
     }
     return _getCodeCommand;
 }
--(RACCommand *)registeCommand{
-    if (_registeCommand == nil) {
-        _registeCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+-(RACCommand *)updatePwdCommand{
+    if (_updatePwdCommand == nil) {
+        _updatePwdCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
             return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
                 [SVProgressHUD XJshowHUD];
                 [ServiceApi registerRequest:input success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
@@ -64,16 +64,16 @@
             }];
         }];
     }
-    return _registeCommand;
+    return _updatePwdCommand;
 }
 
 
 
--(RACSubject *)registeSubject{
-    if (_registeSubject == nil) {
-        _registeSubject = [RACSubject subject];
+-(RACSubject *)updatePwdSubject{
+    if (_updatePwdSubject == nil) {
+        _updatePwdSubject = [RACSubject subject];
     }
-    return _registeSubject;
+    return _updatePwdSubject;
 }
 
 -(RACSubject *)getCodeSubject{

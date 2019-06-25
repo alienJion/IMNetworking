@@ -52,6 +52,9 @@
 		425B330022C07C4200644CB9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B32FE22C07C4200644CB9 /* LoginViewController.m */; };
 		425B330122C07C4200644CB9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425B32FF22C07C4200644CB9 /* LoginViewController.xib */; };
 		4263798922BE840A00FC2FFE /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4263798822BE840A00FC2FFE /* ChatModel.m */; };
+		4265BBB722C1A821006A226F /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4265BBB522C1A821006A226F /* ForgetPwdViewController.m */; };
+		4265BBB822C1A821006A226F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4265BBB622C1A821006A226F /* ForgetPwdViewController.xib */; };
+		4265BBBB22C1BFB8006A226F /* UpdatePwdViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4265BBBA22C1BFB8006A226F /* UpdatePwdViewModel.m */; };
 		42AC7B5622BE1913008C2393 /* ChatVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AC7B5522BE1913008C2393 /* ChatVO.m */; };
 		42B6E0D422C10C5A00F387AA /* RegisteViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B6E0D322C10C5A00F387AA /* RegisteViewModel.m */; };
 		42CE56A022C0ACB800075E98 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CE569F22C0ACB800075E98 /* LoginViewModel.m */; };
@@ -171,6 +174,11 @@
 		425B32FF22C07C4200644CB9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4263798722BE840A00FC2FFE /* ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatModel.h; sourceTree = "<group>"; };
 		4263798822BE840A00FC2FFE /* ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
+		4265BBB422C1A821006A226F /* ForgetPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
+		4265BBB522C1A821006A226F /* ForgetPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
+		4265BBB622C1A821006A226F /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
+		4265BBB922C1BFB8006A226F /* UpdatePwdViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdatePwdViewModel.h; sourceTree = "<group>"; };
+		4265BBBA22C1BFB8006A226F /* UpdatePwdViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdViewModel.m; sourceTree = "<group>"; };
 		42786AD53668AC5750AED694 /* Pods-IMNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMNetworking.release.xcconfig"; path = "Target Support Files/Pods-IMNetworking/Pods-IMNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		42AC7B5422BE1913008C2393 /* ChatVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVO.h; sourceTree = "<group>"; };
 		42AC7B5522BE1913008C2393 /* ChatVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVO.m; sourceTree = "<group>"; };
@@ -577,6 +585,8 @@
 				42CE569F22C0ACB800075E98 /* LoginViewModel.m */,
 				42B6E0D222C10C5A00F387AA /* RegisteViewModel.h */,
 				42B6E0D322C10C5A00F387AA /* RegisteViewModel.m */,
+				4265BBB922C1BFB8006A226F /* UpdatePwdViewModel.h */,
+				4265BBBA22C1BFB8006A226F /* UpdatePwdViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -618,6 +628,9 @@
 				42446D2C22C0D95700A6591C /* RegisteredViewController.h */,
 				42446D2D22C0D95700A6591C /* RegisteredViewController.m */,
 				42446D2E22C0D95700A6591C /* RegisteredViewController.xib */,
+				4265BBB422C1A821006A226F /* ForgetPwdViewController.h */,
+				4265BBB522C1A821006A226F /* ForgetPwdViewController.m */,
+				4265BBB622C1A821006A226F /* ForgetPwdViewController.xib */,
 			);
 			path = ID;
 			sourceTree = "<group>";
@@ -876,6 +889,7 @@
 				425B32D122C06BC900644CB9 /* GuideCollectionViewCell.xib in Resources */,
 				93134A6022B2AC9500868E39 /* LaunchScreen.storyboard in Resources */,
 				93134A5D22B2AC9500868E39 /* Assets.xcassets in Resources */,
+				4265BBB822C1A821006A226F /* ForgetPwdViewController.xib in Resources */,
 				425B32C822C06BC900644CB9 /* sample.aac in Resources */,
 				93134A5B22B2AC9500868E39 /* Main.storyboard in Resources */,
 				42446D3022C0D95700A6591C /* RegisteredViewController.xib in Resources */,
@@ -970,6 +984,7 @@
 				93C114A022B8E29B00D95C15 /* MsgHandshakepbobjc.m in Sources */,
 				425B32C522C06BC900644CB9 /* RecordViewController.m in Sources */,
 				425B32C622C06BC900644CB9 /* PlayRecord.m in Sources */,
+				4265BBB722C1A821006A226F /* ForgetPwdViewController.m in Sources */,
 				425B32DF22C06BC900644CB9 /* ConfigIQKeyboard.m in Sources */,
 				425B32D722C06BC900644CB9 /* XHPayWxReq.m in Sources */,
 				93134AA522B2AD9300868E39 /* MsgChatpbobjc.m in Sources */,
@@ -998,6 +1013,7 @@
 				425B32CF22C06BC900644CB9 /* UIImage+FixOrientation.m in Sources */,
 				425B32C922C06BC900644CB9 /* AudioRecord.m in Sources */,
 				93134AAA22B2AD9300868E39 /* MsgLogoutpbobjc.m in Sources */,
+				4265BBBB22C1BFB8006A226F /* UpdatePwdViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
